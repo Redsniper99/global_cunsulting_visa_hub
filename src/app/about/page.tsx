@@ -79,68 +79,7 @@ export default function AboutPage() {
                 </Container>
             </Box>
 
-            {/* Company Story Section */}
-            <Box component="section" sx={{ py: 12 }}>
-                <Container>
-                    <Grid container spacing={8} alignItems="center">
-                        <Grid size={{ xs: 12, lg: 6 }}>
-                            <ScrollAnimation direction="left">
-                                <Box>
-                                    <Typography variant="h4" fontWeight="bold" sx={{ mb: 4 }}>
-                                        Our Story & <Box component="span" sx={{ color: 'primary.main' }}>Mission</Box>
-                                    </Typography>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, color: 'text.secondary', fontSize: '1.1rem', lineHeight: 1.7 }}>
-                                        <Typography variant="body1">
-                                            Global Consulting & Visa Hub was established with a clear mission: to make the
-                                            complex visa application process accessible, understandable, and achievable for
-                                            students, families, and professionals worldwide.
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            Our consultancy provides a pathway to higher education primarily in the United
-                                            States of America, as well as opportunities to explore and settle in your dream
-                                            country. We maintain continuity in our support regardless of circumstances,
-                                            empowering our applicants to be competitive on the international stage.
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            What sets us apart is our licensed expertise in US consulting, making the process
-                                            considerably easier for our clients. We assist candidates in selecting exceptional
-                                            universities and the best bachelor&apos;s, master&apos;s, and doctoral programs suited to their
-                                            aspirations.
-                                        </Typography>
-                                        <Typography variant="subtitle1" fontWeight="bold" color="text.primary">
-                                            Our vision: To become true agents of the US higher education sector and trusted
-                                            partners in our clients&apos; journey toward their goals.
-                                        </Typography>
-                                    </Box>
-                                </Box>
-                            </ScrollAnimation>
-                        </Grid>
-                        <Grid size={{ xs: 12, lg: 6 }}>
-                            <ScrollAnimation direction="right">
-                                <GlassCard hover={false}>
-                                    <Box sx={{ p: 2 }}>
-                                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 3 }}>What We Help With</Typography>
-                                        <Grid container spacing={2}>
-                                            {expertise.map((item, index) => (
-                                                <Grid size={{ xs: 12, sm: 6 }} key={index}>
-                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                                        <CheckCircleOutlineIcon color="success" fontSize="small" />
-                                                        <Typography variant="body2" color="text.primary">
-                                                            {item}
-                                                        </Typography>
-                                                    </Box>
-                                                </Grid>
-                                            ))}
-                                        </Grid>
-                                    </Box>
-                                </GlassCard>
-                            </ScrollAnimation>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
-
-            {/* Founder Section */}
+            {/* Founder Section - Moved to top */}
             <Box component="section" sx={{ py: 12, background: 'linear-gradient(135deg, #FAFBFF 0%, #F3F6FF 100%)' }}>
                 <Container>
                     <ScrollAnimation>
@@ -228,6 +167,67 @@ export default function AboutPage() {
                             </Box>
                         </GlassCard>
                     </Container>
+                </Container>
+            </Box>
+
+            {/* Company Story Section */}
+            <Box component="section" sx={{ py: 12 }}>
+                <Container>
+                    <Grid container spacing={8} alignItems="center">
+                        <Grid size={{ xs: 12, lg: 6 }}>
+                            <ScrollAnimation direction="left">
+                                <Box>
+                                    <Typography variant="h4" fontWeight="bold" sx={{ mb: 4 }}>
+                                        Our Story & <Box component="span" sx={{ color: 'primary.main' }}>Mission</Box>
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, color: 'text.secondary', fontSize: '1.1rem', lineHeight: 1.7 }}>
+                                        <Typography variant="body1">
+                                            Global Consulting & Visa Hub was established with a clear mission: to make the
+                                            complex visa application process accessible, understandable, and achievable for
+                                            students, families, and professionals worldwide.
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            Our consultancy provides a pathway to higher education primarily in the United
+                                            States of America, as well as opportunities to explore and settle in your dream
+                                            country. We maintain continuity in our support regardless of circumstances,
+                                            empowering our applicants to be competitive on the international stage.
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            What sets us apart is our licensed expertise in US consulting, making the process
+                                            considerably easier for our clients. We assist candidates in selecting exceptional
+                                            universities and the best bachelor&apos;s, master&apos;s, and doctoral programs suited to their
+                                            aspirations.
+                                        </Typography>
+                                        <Typography variant="subtitle1" fontWeight="bold" color="text.primary">
+                                            Our vision: To become true agents of the US higher education sector and trusted
+                                            partners in our clients&apos; journey toward their goals.
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </ScrollAnimation>
+                        </Grid>
+                        <Grid size={{ xs: 12, lg: 6 }}>
+                            <ScrollAnimation direction="right">
+                                <GlassCard hover={false}>
+                                    <Box sx={{ p: 2 }}>
+                                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 3 }}>What We Help With</Typography>
+                                        <Grid container spacing={2}>
+                                            {expertise.map((item, index) => (
+                                                <Grid size={{ xs: 12, sm: 6 }} key={index}>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                                        <CheckCircleOutlineIcon color="success" fontSize="small" />
+                                                        <Typography variant="body2" color="text.primary">
+                                                            {item}
+                                                        </Typography>
+                                                    </Box>
+                                                </Grid>
+                                            ))}
+                                        </Grid>
+                                    </Box>
+                                </GlassCard>
+                            </ScrollAnimation>
+                        </Grid>
+                    </Grid>
                 </Container>
             </Box>
 
