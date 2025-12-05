@@ -139,17 +139,7 @@ export default function Navbar() {
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    {/* Mobile Menu Icon */}
-                    <IconButton
-                        size="large"
-                        aria-label="menu"
-                        onClick={handleOpenNavMenu}
-                        sx={{ color: 'text.primary' }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-
-                    {/* Mobile Logo */}
+                    {/* Mobile Logo - Left */}
                     <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
                         <Image
                             src="/logo.svg"
@@ -161,8 +151,15 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Spacer for centering */}
-                    <Box sx={{ width: 48 }} />
+                    {/* Mobile Menu Icon - Right */}
+                    <IconButton
+                        size="large"
+                        aria-label="menu"
+                        onClick={handleOpenNavMenu}
+                        sx={{ color: 'text.primary' }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
 
                     {/* Mobile Menu */}
                     <Menu

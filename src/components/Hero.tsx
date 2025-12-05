@@ -199,7 +199,7 @@ export default function Hero({
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                    <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: { xs: 3, md: 4 } }}>
+                    <Box sx={{ mt: { xs: 4, md: 8 }, mb: { xs: 10, md: 4 }, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: { xs: 3, md: 4 } }}>
                         <Box textAlign="center">
                             <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: { xs: '1.5rem', md: '2.125rem' } }}>5+</Typography>
                             <Typography variant="body2" color="text.secondary">Years Experience</Typography>
@@ -221,7 +221,7 @@ export default function Hero({
             </Container>
 
             {/* Flag Slider at Bottom */}
-            <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
+            <Box sx={{ position: 'absolute', bottom: { xs: 0, md: 0 }, left: 0, right: 0 }}>
                 <FlagSlider />
             </Box>
         </Box>
