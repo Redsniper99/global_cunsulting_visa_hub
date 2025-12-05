@@ -16,6 +16,7 @@ interface HeroProps {
     title?: string;
     subtitle?: string;
     description?: string;
+    mobileDescription?: string;
     primaryCTA?: {
         text: string;
         href: string;
@@ -31,6 +32,7 @@ export default function Hero({
     title = 'Global Consulting & Visa Hub',
     subtitle = 'Your Trusted Partner for US & Schengen Visa Success',
     description = 'Expert guidance, transparent process, and personalized support for students, families, and professionals. Over 5 years of experience helping clients achieve their visa goals with high approval outcomes.',
+    mobileDescription = 'Expert visa guidance for students, families & professionals. 5+ years experience with high approval rates.',
     primaryCTA = { text: 'Book a Free Consultation', href: '/contact' },
     secondaryCTA = { text: 'WhatsApp Us', href: 'https://wa.me/19367884084' },
     showBadge = true,
@@ -148,8 +150,13 @@ export default function Hero({
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                    <Typography variant="body1" color="text.secondary" sx={{ mb: 6, fontSize: '1.125rem', maxWidth: '42rem', mx: 'auto' }}>
+                    {/* Desktop description */}
+                    <Typography variant="body1" color="text.secondary" sx={{ display: { xs: 'none', sm: 'block' }, mb: 6, fontSize: '1.125rem', maxWidth: '42rem', mx: 'auto' }}>
                         {description}
+                    </Typography>
+                    {/* Mobile description - shorter */}
+                    <Typography variant="body1" color="text.secondary" sx={{ display: { xs: 'block', sm: 'none' }, mb: 4, fontSize: '1rem', maxWidth: '90%', mx: 'auto' }}>
+                        {mobileDescription}
                     </Typography>
                 </motion.div>
 
