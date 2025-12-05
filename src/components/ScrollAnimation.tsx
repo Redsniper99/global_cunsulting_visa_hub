@@ -32,7 +32,7 @@ export default function ScrollAnimation({
             transition: {
                 duration: 0.6,
                 delay: delay,
-                ease: 'easeOut',
+                ease: [0.25, 0.1, 0.25, 1] as const, // easeOut curve
             },
         },
     };
