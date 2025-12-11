@@ -50,9 +50,7 @@ export default function Navbar() {
                     borderRadius: 50, // Pill shape
                     py: 0.5,
                     px: 2,
-                    background: 'rgba(255, 255, 255, 0.75)',
-                    backdropFilter: 'blur(20px)',
-                    WebkitBackdropFilter: 'blur(20px)',
+                    background: 'rgba(255, 255, 255, 0.98)',
                     border: '1px solid rgba(255, 255, 255, 0.5)',
                     boxShadow: '0 8px 32px rgba(59, 89, 152, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04)',
                     zIndex: 1100,
@@ -61,15 +59,27 @@ export default function Navbar() {
                 <Container maxWidth="lg" disableGutters>
                     <Toolbar disableGutters sx={{ justifyContent: 'space-between', minHeight: '56px !important' }}>
                         {/* Logo */}
-                        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+                        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '10px' }}>
                             <Image
-                                src="/logo.svg"
+                                src="/Global Consulting & Visa Hub-01.svg"
                                 alt="Global Consulting Visa Hub"
-                                width={140}
+                                width={36}
                                 height={36}
                                 priority
-                                style={{ height: '36px', width: 'auto' }}
+                                style={{ height: '36px', width: '36px', borderRadius: '50%' }}
                             />
+                            <Typography
+                                variant="subtitle1"
+                                sx={{
+                                    fontWeight: 700,
+                                    color: 'text.primary',
+                                    fontSize: '0.95rem',
+                                    lineHeight: 1.2,
+                                    whiteSpace: 'nowrap',
+                                }}
+                            >
+                                Global Consulting & Visa Hub
+                            </Typography>
                         </Link>
 
                         {/* Navigation Links */}
@@ -131,24 +141,33 @@ export default function Navbar() {
                     top: 0,
                     left: 0,
                     right: 0,
-                    background: 'rgba(255, 255, 255, 0.9)',
-                    backdropFilter: 'blur(20px)',
-                    WebkitBackdropFilter: 'blur(20px)',
+                    background: 'rgba(255, 255, 255, 0.98)',
                     borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
                     zIndex: 1100,
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     {/* Mobile Logo - Left */}
-                    <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+                    <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '8px' }}>
                         <Image
-                            src="/logo.svg"
+                            src="/Global Consulting & Visa Hub-01.svg"
                             alt="Global Consulting Visa Hub"
-                            width={120}
+                            width={32}
                             height={32}
                             priority
-                            style={{ height: '32px', width: 'auto' }}
+                            style={{ height: '32px', width: '32px', borderRadius: '50%' }}
                         />
+                        <Typography
+                            variant="subtitle2"
+                            sx={{
+                                fontWeight: 700,
+                                color: 'text.primary',
+                                fontSize: '0.8rem',
+                                lineHeight: 1.2,
+                            }}
+                        >
+                            Global Consulting & Visa Hub
+                        </Typography>
                     </Link>
 
                     {/* Mobile Menu Icon - Right */}

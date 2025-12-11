@@ -3,27 +3,28 @@
 import { motion } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Image from 'next/image';
 
-// USA + Schengen countries
+// USA + Schengen countries with country codes for flag images
 const countries = [
-    { code: 'US', name: 'USA', flag: '🇺🇸' },
-    { code: 'DE', name: 'Germany', flag: '🇩🇪' },
-    { code: 'FR', name: 'France', flag: '🇫🇷' },
-    { code: 'IT', name: 'Italy', flag: '🇮🇹' },
-    { code: 'ES', name: 'Spain', flag: '🇪🇸' },
-    { code: 'NL', name: 'Netherlands', flag: '🇳🇱' },
-    { code: 'BE', name: 'Belgium', flag: '🇧🇪' },
-    { code: 'AT', name: 'Austria', flag: '🇦🇹' },
-    { code: 'CH', name: 'Switzerland', flag: '🇨🇭' },
-    { code: 'PT', name: 'Portugal', flag: '🇵🇹' },
-    { code: 'GR', name: 'Greece', flag: '🇬🇷' },
-    { code: 'SE', name: 'Sweden', flag: '🇸🇪' },
-    { code: 'NO', name: 'Norway', flag: '🇳🇴' },
-    { code: 'DK', name: 'Denmark', flag: '🇩🇰' },
-    { code: 'FI', name: 'Finland', flag: '🇫🇮' },
-    { code: 'PL', name: 'Poland', flag: '🇵🇱' },
-    { code: 'CZ', name: 'Czech Republic', flag: '🇨🇿' },
-    { code: 'HU', name: 'Hungary', flag: '🇭🇺' },
+    { code: 'us', name: 'USA' },
+    { code: 'de', name: 'Germany' },
+    { code: 'fr', name: 'France' },
+    { code: 'it', name: 'Italy' },
+    { code: 'es', name: 'Spain' },
+    { code: 'nl', name: 'Netherlands' },
+    { code: 'be', name: 'Belgium' },
+    { code: 'at', name: 'Austria' },
+    { code: 'ch', name: 'Switzerland' },
+    { code: 'pt', name: 'Portugal' },
+    { code: 'gr', name: 'Greece' },
+    { code: 'se', name: 'Sweden' },
+    { code: 'no', name: 'Norway' },
+    { code: 'dk', name: 'Denmark' },
+    { code: 'fi', name: 'Finland' },
+    { code: 'pl', name: 'Poland' },
+    { code: 'cz', name: 'Czech Republic' },
+    { code: 'hu', name: 'Hungary' },
 ];
 
 export default function FlagSlider() {
@@ -38,8 +39,6 @@ export default function FlagSlider() {
                 py: { xs: 2, md: 3 },
             }}
         >
-
-
             <Box
                 sx={{
                     display: 'flex',
@@ -79,13 +78,24 @@ export default function FlagSlider() {
                         >
                             <Box
                                 sx={{
-                                    fontSize: { xs: '1.8rem', md: '2.5rem' },
-                                    lineHeight: 1,
+                                    width: { xs: 40, md: 56 },
+                                    height: { xs: 28, md: 40 },
+                                    position: 'relative',
                                     mb: 0.5,
-                                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+                                    borderRadius: 1,
+                                    overflow: 'hidden',
+                                    boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
                                 }}
                             >
-                                {country.flag}
+                                <img
+                                    src={`https://flagcdn.com/w80/${country.code}.png`}
+                                    alt={`${country.name} flag`}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                    }}
+                                />
                             </Box>
                             <Typography
                                 variant="caption"

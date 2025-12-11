@@ -97,11 +97,11 @@ export default function AboutPage() {
                                     <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <Box sx={{ position: 'relative' }}>
                                             <Image
-                                                src="/founder.svg"
+                                                src="/AboutPic2.png.webp"
                                                 alt="Shamlee Marambe Bandara"
                                                 width={200}
                                                 height={200}
-                                                style={{ borderRadius: 16 }}
+                                                style={{ borderRadius: 16, objectFit: 'cover' }}
                                             />
                                             <Box
                                                 sx={{

@@ -33,9 +33,7 @@ export default function GlassCard({
                 sx={{
                     p: 3,
                     height: '100%',
-                    background: 'rgba(255, 255, 255, 0.85)',
-                    backdropFilter: 'blur(16px)',
-                    WebkitBackdropFilter: 'blur(16px)',
+                    background: 'rgba(255, 255, 255, 0.95)',
                     border: '1px solid rgba(0, 40, 104, 0.1)',
                     borderRadius: 3,
                     boxShadow: '0 8px 32px rgba(0, 40, 104, 0.08)',
