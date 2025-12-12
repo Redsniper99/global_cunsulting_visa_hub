@@ -5,6 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ThemeRegistry from "@/ThemeRegistry";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import UnderMaintenance from "@/components/UnderMaintenance";
+
+// Set to true to show maintenance page, false to show normal site
+const MAINTENANCE_MODE = true;
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,6 +51,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Show maintenance page if MAINTENANCE_MODE is true
+  if (MAINTENANCE_MODE) {
+    return (
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${inter.variable} ${outfit.variable} antialiased font-sans`}
+          suppressHydrationWarning
+        >
+          <ThemeRegistry>
+            <UnderMaintenance />
+          </ThemeRegistry>
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -66,4 +86,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
