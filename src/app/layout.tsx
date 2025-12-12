@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   description: "Your trusted partner for US and Schengen visa consulting. Expert guidance, transparent process, and personalized support for students, families, and professionals. Over 5 years of experience with high approval outcomes.",
   keywords: ["visa consulting", "US visa", "Schengen visa", "student visa", "F-1 visa", "tourist visa", "B1 B2 visa", "immigration consulting"],
   authors: [{ name: "Global Consulting & Visa Hub" }],
+  icons: {
+    icon: "/Global Consulting & Visa Hub-01.svg",
+    shortcut: "/Global Consulting & Visa Hub-01.svg",
+    apple: "/Global Consulting & Visa Hub-01.svg",
+  },
   openGraph: {
     title: "Global Consulting & Visa Hub | US & Schengen Visa Experts",
     description: "Expert visa consulting for US and Schengen countries. Student visas, tourist visas, business visas, and more.",
