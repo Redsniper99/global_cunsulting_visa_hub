@@ -8,7 +8,7 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import UnderMaintenance from "@/components/UnderMaintenance";
 
 // Set to true to show maintenance page, false to show normal site
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 const inter = Inter({
   variable: "--font-inter",
