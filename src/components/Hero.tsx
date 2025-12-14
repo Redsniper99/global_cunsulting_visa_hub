@@ -51,7 +51,9 @@ export default function Hero({
                 background: 'linear-gradient(135deg, rgba(59, 89, 152, 0.05) 0%, rgba(107, 141, 214, 0.08) 100%)',
                 overflow: 'hidden',
                 pt: { xs: 10, md: 12 },
-                pb: { xs: 12, md: 8 }
+                pb: { xs: 12, md: 8 },
+                width: '100%',
+                maxWidth: '100vw'
             }}
         >
 
@@ -344,17 +346,28 @@ export default function Hero({
                     </Box>
 
                     {/* Right Image - Visual in middle on mobile */}
-                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: 1, md: 2 } }}>
+                    <Box sx={{
+                        flex: { xs: 1, md: '0 0 45%' },
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        order: { xs: 1, md: 2 },
+                        maxWidth: { xs: '100%', md: '45%' },
+                        overflow: 'visible',
+                        pr: { md: 2, lg: 4 }
+                    }}>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
+                            style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
                         >
                             <Box
                                 sx={{
                                     position: 'relative',
-                                    width: { xs: 300, sm: 360, md: 500, lg: 550 },
-                                    height: { xs: 380, sm: 450, md: 650, lg: 700 },
+                                    width: { xs: 300, sm: 360, md: '100%' },
+                                    maxWidth: { md: 420, lg: 500, xl: 550 },
+                                    height: { xs: 380, sm: 450, md: 550, lg: 620, xl: 700 },
                                     mb: { xs: 0, md: 0 }
                                 }}
                             >

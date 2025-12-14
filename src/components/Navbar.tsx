@@ -6,11 +6,16 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -24,14 +29,10 @@ const pages = [
 ];
 
 export default function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
     };
 
     return (
@@ -173,50 +174,128 @@ export default function Navbar() {
                     {/* Mobile Menu Icon - Right */}
                     <IconButton
                         size="large"
-                        aria-label="menu"
-                        onClick={handleOpenNavMenu}
+                        aria-label="open navigation menu"
+                        onClick={handleDrawerToggle}
                         sx={{ color: 'text.primary' }}
                     >
                         <MenuIcon />
                     </IconButton>
-
-                    {/* Mobile Menu */}
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorElNav}
-                        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-                        keepMounted
-                        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-                        open={Boolean(anchorElNav)}
-                        onClose={handleCloseNavMenu}
-                        slotProps={{
-                            paper: {
-                                sx: {
-                                    mt: 1,
-                                    borderRadius: 3,
-                                    boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                                    minWidth: 200,
-                                },
-                            },
-                        }}
-                    >
-                        {pages.map((page) => (
-                            <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                <Link href={page.href} style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
-                                    <Typography>{page.name}</Typography>
-                                </Link>
-                            </MenuItem>
-                        ))}
-                        <MenuItem onClick={handleCloseNavMenu} sx={{ mt: 1 }}>
-                            <Link href="/contact" style={{ textDecoration: 'none', width: '100%' }}>
-                                <Button variant="contained" fullWidth sx={{ borderRadius: 2 }}>
-                                    Book Consultation
-                                </Button>
-                            </Link>
-                        </MenuItem>
-                    </Menu>
                 </Toolbar>
             </AppBar>
+
+            {/* Mobile Drawer - Half Width from Right */}
+            <Drawer
+                anchor="right"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                sx={{
+                    display: { xs: 'block', md: 'none' },
+                    '& .MuiDrawer-paper': {
+                        width: '66.67%',
+                        boxSizing: 'border-box',
+                        backgroundColor: '#ffffff',
+                        boxShadow: '-4px 0 20px rgba(0, 0, 0, 0.15)',
+                    },
+                }}
+                slotProps={{
+                    backdrop: {
+                        sx: {
+                            backgroundColor: 'transparent',
+                        },
+                    },
+                }}
+            >
+                <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    {/* Drawer Header with Close Button */}
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            p: 2,
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
+                        }}
+                    >
+                        <Typography
+                            variant="subtitle1"
+                            sx={{
+                                fontWeight: 700,
+                                color: 'text.primary',
+                                fontSize: '0.9rem',
+                            }}
+                        >
+                            Menu
+                        </Typography>
+                        <IconButton
+                            onClick={handleDrawerToggle}
+                            sx={{ color: 'text.primary' }}
+                            aria-label="close navigation menu"
+                        >
+                            <CloseIcon />
+                        </IconButton>
+                    </Box>
+
+                    {/* Navigation Links */}
+                    <List sx={{ flex: 1, py: 2 }}>
+                        {pages.map((page) => (
+                            <ListItem key={page.name} disablePadding>
+                                <Link
+                                    href={page.href}
+                                    style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}
+                                    onClick={handleDrawerToggle}
+                                >
+                                    <ListItemButton
+                                        sx={{
+                                            py: 1.5,
+                                            px: 3,
+                                            '&:hover': {
+                                                backgroundColor: 'rgba(59, 89, 152, 0.08)',
+                                            },
+                                        }}
+                                    >
+                                        <ListItemText
+                                            primary={page.name}
+                                            primaryTypographyProps={{
+                                                fontWeight: 500,
+                                                fontSize: '0.95rem',
+                                            }}
+                                        />
+                                    </ListItemButton>
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
+
+                    <Divider />
+
+                    {/* CTA Button at Bottom */}
+                    <Box sx={{ p: 2 }}>
+                        <Link
+                            href="/contact"
+                            style={{ textDecoration: 'none', width: '100%' }}
+                            onClick={handleDrawerToggle}
+                        >
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                sx={{
+                                    borderRadius: 2,
+                                    py: 1.5,
+                                    fontWeight: 600,
+                                    textTransform: 'none',
+                                    background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
+                                    boxShadow: '0 4px 14px rgba(59, 89, 152, 0.4)',
+                                    '&:hover': {
+                                        background: 'linear-gradient(135deg, #324b80 0%, #5a7bc4 100%)',
+                                    },
+                                }}
+                            >
+                                Book Consultation
+                            </Button>
+                        </Link>
+                    </Box>
+                </Box>
+            </Drawer>
         </>
     );
 }
