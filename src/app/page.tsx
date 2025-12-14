@@ -308,7 +308,7 @@ export default function Home() {
               <Button
                 variant="outlined"
                 size="large"
-                href="/testimonials"
+                href="/success-stories"
                 sx={{
                   px: 4,
                   py: 1.5,
@@ -367,7 +367,7 @@ export default function Home() {
                   '&:hover': { borderWidth: 2 }
                 }}
               >
-                Read More Success Stories
+                Read More Client Reviews
               </Button>
             </Box>
           </ScrollAnimation>
