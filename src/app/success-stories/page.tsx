@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -141,6 +142,16 @@ const visaTypeConfig = {
 };
 
 export default function SuccessStoriesPage() {
+    const [expandedStories, setExpandedStories] = useState<number[]>([]);
+
+    const toggleExpanded = (storyId: number) => {
+        setExpandedStories(prev =>
+            prev.includes(storyId)
+                ? prev.filter(id => id !== storyId)
+                : [...prev, storyId]
+        );
+    };
+
     return (
         <>
             {/* Hero Section */}
@@ -371,20 +382,43 @@ export default function SuccessStoriesPage() {
                                             </Box>
 
                                             {/* Story */}
-                                            <Typography
-                                                variant="body2"
-                                                color="text.secondary"
-                                                sx={{
-                                                    lineHeight: 1.7,
-                                                    flex: 1,
-                                                    display: '-webkit-box',
-                                                    WebkitLineClamp: { xs: 4, md: 3 },
-                                                    WebkitBoxOrient: 'vertical',
-                                                    overflow: 'hidden',
-                                                }}
-                                            >
-                                                &ldquo;{story.fullStory}&rdquo;
-                                            </Typography>
+                                            <Box sx={{ flex: 1 }}>
+                                                <Typography
+                                                    variant="body2"
+                                                    color="text.secondary"
+                                                    sx={{
+                                                        lineHeight: 1.7,
+                                                        ...(!expandedStories.includes(story.id) && {
+                                                            display: '-webkit-box',
+                                                            WebkitLineClamp: { xs: 4, md: 3 },
+                                                            WebkitBoxOrient: 'vertical',
+                                                            overflow: 'hidden',
+                                                        }),
+                                                    }}
+                                                >
+                                                    &ldquo;{story.fullStory}&rdquo;
+                                                </Typography>
+                                                <Button
+                                                    variant="text"
+                                                    size="small"
+                                                    onClick={() => toggleExpanded(story.id)}
+                                                    sx={{
+                                                        mt: 1,
+                                                        p: 0,
+                                                        minWidth: 'auto',
+                                                        fontWeight: 600,
+                                                        fontSize: '0.8rem',
+                                                        color: 'primary.main',
+                                                        textTransform: 'none',
+                                                        '&:hover': {
+                                                            bgcolor: 'transparent',
+                                                            textDecoration: 'underline',
+                                                        },
+                                                    }}
+                                                >
+                                                    {expandedStories.includes(story.id) ? 'See less' : 'See more...'}
+                                                </Button>
+                                            </Box>
                                         </Box>
                                     </Card>
                                 </motion.div>
