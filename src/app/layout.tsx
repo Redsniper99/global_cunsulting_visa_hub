@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   keywords: ["visa consulting", "US visa", "Schengen visa", "student visa", "F-1 visa", "tourist visa", "B1 B2 visa", "immigration consulting"],
   authors: [{ name: "Global Consulting & Visa Hub" }],
   icons: {
-    icon: "/Global Consulting & Visa Hub-01.svg",
-    shortcut: "/Global Consulting & Visa Hub-01.svg",
-    apple: "/Global Consulting & Visa Hub-01.svg",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Global Consulting & Visa Hub | US & Schengen Visa Experts",
