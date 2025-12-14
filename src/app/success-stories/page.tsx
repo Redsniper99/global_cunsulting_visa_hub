@@ -188,183 +188,209 @@ export default function SuccessStoriesPage() {
             {/* Success Stories Grid */}
             <Box sx={{ py: { xs: 6, md: 10 } }}>
                 <Container maxWidth="lg">
-                    <Grid container spacing={4}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         {successStories.map((story, index) => {
                             const config = visaTypeConfig[story.visaType];
                             const initials = story.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
 
                             return (
-                                <Grid size={{ xs: 12, md: 6 }} key={story.id}>
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 30 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true, amount: 0.1 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        style={{ height: '100%' }}
+                                <motion.div
+                                    key={story.id}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <Card
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: { xs: 'column', md: 'row' },
+                                            overflow: 'hidden',
+                                            transition: 'all 0.3s ease',
+                                            '&:hover': {
+                                                transform: 'translateY(-4px)',
+                                                boxShadow: '0 20px 50px rgba(59, 89, 152, 0.15)',
+                                            },
+                                        }}
                                     >
-                                        <Card
+                                        {/* Image Section - Left Side */}
+                                        <Box
                                             sx={{
-                                                height: '100%',
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                overflow: 'hidden',
-                                                transition: 'all 0.3s ease',
-                                                '&:hover': {
-                                                    transform: 'translateY(-8px)',
-                                                    boxShadow: '0 20px 50px rgba(59, 89, 152, 0.15)',
-                                                },
+                                                position: 'relative',
+                                                width: { xs: '100%', md: 320 },
+                                                minWidth: { md: 320 },
+                                                height: { xs: 200, md: 'auto' },
+                                                minHeight: { md: 280 },
                                             }}
                                         >
-                                            {/* Header with Visa Image */}
-                                            <Box sx={{ position: 'relative', height: 200, overflow: 'hidden' }}>
-                                                <Image
-                                                    src={story.visaImage}
-                                                    alt={`${story.name}'s approved visa`}
-                                                    fill
-                                                    style={{ objectFit: 'cover' }}
-                                                />
-                                                {/* Gradient Overlay */}
-                                                <Box
-                                                    sx={{
-                                                        position: 'absolute',
-                                                        inset: 0,
-                                                        background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%)',
-                                                    }}
-                                                />
-                                                {/* Approved Badge */}
-                                                <Box
-                                                    sx={{
-                                                        position: 'absolute',
-                                                        top: 16,
-                                                        right: 16,
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        gap: 0.5,
-                                                        bgcolor: 'rgba(76, 175, 80, 0.95)',
-                                                        color: 'white',
-                                                        px: 2,
-                                                        py: 0.75,
-                                                        borderRadius: 2,
-                                                        fontSize: '0.8rem',
-                                                        fontWeight: 700,
-                                                    }}
-                                                >
-                                                    <CheckCircleIcon sx={{ fontSize: 18 }} />
-                                                    VISA APPROVED
-                                                </Box>
-                                                {/* Visa Type Badge */}
-                                                <Box
-                                                    sx={{
-                                                        position: 'absolute',
-                                                        bottom: 16,
-                                                        left: 16,
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        gap: 0.75,
-                                                        bgcolor: config.color,
-                                                        color: 'white',
-                                                        px: 2,
-                                                        py: 0.75,
-                                                        borderRadius: 2,
-                                                        fontSize: '0.85rem',
-                                                        fontWeight: 600,
-                                                    }}
-                                                >
-                                                    {config.icon}
-                                                    {story.visaType} - {config.label}
-                                                </Box>
+                                            <Image
+                                                src={story.visaImage}
+                                                alt={`${story.name}'s approved visa`}
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                            {/* Gradient Overlay */}
+                                            <Box
+                                                sx={{
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    background: {
+                                                        xs: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%)',
+                                                        md: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%)'
+                                                    },
+                                                }}
+                                            />
+                                            {/* Approved Badge */}
+                                            <Box
+                                                sx={{
+                                                    position: 'absolute',
+                                                    top: 16,
+                                                    left: 16,
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: 0.5,
+                                                    bgcolor: 'rgba(76, 175, 80, 0.95)',
+                                                    color: 'white',
+                                                    px: 1.5,
+                                                    py: 0.5,
+                                                    borderRadius: 2,
+                                                    fontSize: '0.75rem',
+                                                    fontWeight: 700,
+                                                }}
+                                            >
+                                                <CheckCircleIcon sx={{ fontSize: 16 }} />
+                                                APPROVED
                                             </Box>
+                                            {/* Visa Type Badge */}
+                                            <Box
+                                                sx={{
+                                                    position: 'absolute',
+                                                    bottom: 16,
+                                                    left: 16,
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: 0.5,
+                                                    bgcolor: config.color,
+                                                    color: 'white',
+                                                    px: 1.5,
+                                                    py: 0.5,
+                                                    borderRadius: 2,
+                                                    fontSize: '0.75rem',
+                                                    fontWeight: 600,
+                                                }}
+                                            >
+                                                {config.icon}
+                                                {story.visaType} - {config.label}
+                                            </Box>
+                                        </Box>
 
-                                            {/* Content */}
-                                            <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                                {/* Author Info */}
-                                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                                                    <Avatar
-                                                        sx={{
-                                                            width: 56,
-                                                            height: 56,
-                                                            background: `linear-gradient(135deg, ${config.color} 0%, #6B8DD6 100%)`,
-                                                            fontWeight: 'bold',
-                                                            fontSize: '1.1rem',
-                                                        }}
-                                                    >
-                                                        {initials}
-                                                    </Avatar>
-                                                    <Box sx={{ flex: 1 }}>
-                                                        <Typography variant="h6" fontWeight={700} sx={{ lineHeight: 1.2 }}>
-                                                            {story.name}
-                                                        </Typography>
+                                        {/* Content Section - Right Side */}
+                                        <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                            {/* Author Info */}
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                                                <Avatar
+                                                    sx={{
+                                                        width: 48,
+                                                        height: 48,
+                                                        background: `linear-gradient(135deg, ${config.color} 0%, #6B8DD6 100%)`,
+                                                        fontWeight: 'bold',
+                                                        fontSize: '1rem',
+                                                    }}
+                                                >
+                                                    {initials}
+                                                </Avatar>
+                                                <Box sx={{ flex: 1 }}>
+                                                    <Typography variant="h6" fontWeight={700} sx={{ lineHeight: 1.2 }}>
+                                                        {story.name}
+                                                    </Typography>
+                                                    <Typography variant="body2" color="text.secondary">
+                                                        {story.country}
+                                                    </Typography>
+                                                </Box>
+                                                {/* Timeline - Desktop */}
+                                                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                                        <CalendarMonthOutlinedIcon sx={{ color: 'text.secondary', fontSize: 18 }} />
                                                         <Typography variant="body2" color="text.secondary">
-                                                            {story.country}
+                                                            {story.appliedDate}
+                                                        </Typography>
+                                                    </Box>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                                        <CheckCircleIcon sx={{ color: 'success.main', fontSize: 18 }} />
+                                                        <Typography variant="body2" color="success.main" fontWeight={600}>
+                                                            {story.grantedDate}
                                                         </Typography>
                                                     </Box>
                                                 </Box>
+                                            </Box>
 
-                                                {/* Timeline */}
-                                                <Box
-                                                    sx={{
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        gap: 1,
-                                                        mb: 2,
-                                                        p: 2,
-                                                        bgcolor: 'rgba(59, 89, 152, 0.05)',
-                                                        borderRadius: 2,
-                                                    }}
-                                                >
-                                                    <CalendarMonthOutlinedIcon sx={{ color: 'primary.main', fontSize: 20 }} />
-                                                    <Typography variant="body2" color="text.secondary">
-                                                        Applied: <strong>{story.appliedDate}</strong>
-                                                    </Typography>
-                                                    <Box sx={{ flex: 1 }} />
-                                                    <CheckCircleIcon sx={{ color: 'success.main', fontSize: 20 }} />
-                                                    <Typography variant="body2" color="success.main" fontWeight={600}>
-                                                        Granted: {story.grantedDate}
-                                                    </Typography>
-                                                </Box>
-
-                                                {/* Details Chips */}
-                                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
-                                                    {story.university && (
-                                                        <Chip
-                                                            size="small"
-                                                            label={story.university}
-                                                            sx={{ fontSize: '0.75rem', bgcolor: 'rgba(59, 89, 152, 0.08)' }}
-                                                        />
-                                                    )}
-                                                    {story.course && (
-                                                        <Chip
-                                                            size="small"
-                                                            label={story.course}
-                                                            sx={{ fontSize: '0.75rem', bgcolor: 'rgba(107, 141, 214, 0.1)' }}
-                                                        />
-                                                    )}
-                                                    <Chip
-                                                        size="small"
-                                                        label={story.purpose}
-                                                        sx={{ fontSize: '0.75rem', bgcolor: 'rgba(76, 175, 80, 0.1)' }}
-                                                    />
-                                                </Box>
-
-                                                {/* Full Story */}
-                                                <Typography
-                                                    variant="body1"
-                                                    color="text.secondary"
-                                                    sx={{
-                                                        lineHeight: 1.8,
-                                                        flex: 1,
-                                                        fontSize: '0.95rem',
-                                                    }}
-                                                >
-                                                    &ldquo;{story.fullStory}&rdquo;
+                                            {/* Timeline - Mobile */}
+                                            <Box
+                                                sx={{
+                                                    display: { xs: 'flex', md: 'none' },
+                                                    alignItems: 'center',
+                                                    gap: 1,
+                                                    mb: 2,
+                                                    p: 1.5,
+                                                    bgcolor: 'rgba(59, 89, 152, 0.05)',
+                                                    borderRadius: 2,
+                                                }}
+                                            >
+                                                <CalendarMonthOutlinedIcon sx={{ color: 'primary.main', fontSize: 18 }} />
+                                                <Typography variant="body2" color="text.secondary">
+                                                    Applied: <strong>{story.appliedDate}</strong>
+                                                </Typography>
+                                                <Box sx={{ flex: 1 }} />
+                                                <CheckCircleIcon sx={{ color: 'success.main', fontSize: 18 }} />
+                                                <Typography variant="body2" color="success.main" fontWeight={600}>
+                                                    {story.grantedDate}
                                                 </Typography>
                                             </Box>
-                                        </Card>
-                                    </motion.div>
-                                </Grid>
+
+                                            {/* Details Chips */}
+                                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
+                                                {story.university && (
+                                                    <Chip
+                                                        size="small"
+                                                        label={story.university}
+                                                        sx={{ fontSize: '0.75rem', bgcolor: 'rgba(59, 89, 152, 0.08)' }}
+                                                    />
+                                                )}
+                                                {story.course && (
+                                                    <Chip
+                                                        size="small"
+                                                        label={story.course}
+                                                        sx={{ fontSize: '0.75rem', bgcolor: 'rgba(107, 141, 214, 0.1)' }}
+                                                    />
+                                                )}
+                                                <Chip
+                                                    size="small"
+                                                    label={story.purpose}
+                                                    sx={{ fontSize: '0.75rem', bgcolor: 'rgba(76, 175, 80, 0.1)' }}
+                                                />
+                                            </Box>
+
+                                            {/* Story */}
+                                            <Typography
+                                                variant="body2"
+                                                color="text.secondary"
+                                                sx={{
+                                                    lineHeight: 1.7,
+                                                    flex: 1,
+                                                    display: '-webkit-box',
+                                                    WebkitLineClamp: { xs: 4, md: 3 },
+                                                    WebkitBoxOrient: 'vertical',
+                                                    overflow: 'hidden',
+                                                }}
+                                            >
+                                                &ldquo;{story.fullStory}&rdquo;
+                                            </Typography>
+                                        </Box>
+                                    </Card>
+                                </motion.div>
                             );
                         })}
-                    </Grid>
+                    </Box>
 
                     {/* Back Button */}
                     <motion.div
