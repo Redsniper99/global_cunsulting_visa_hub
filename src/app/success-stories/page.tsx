@@ -34,7 +34,7 @@ const successStories = [
         country: 'Sri Lanka',
         story: 'My dream of studying in America came true! With expert guidance, I secured an $11,000 scholarship and my F-1 visa was approved on the first attempt. The entire process was handled professionally, from university selection to interview preparation. I am now pursuing my degree in Texas and couldn\'t be happier with the support I received.',
         fullStory: 'When I first decided to pursue higher education in the United States, I was overwhelmed by the complex visa process. I had heard many stories of visa rejections and was quite nervous. That\'s when I discovered Global Consulting & Visa Hub. From our very first consultation, I knew I was in good hands. The team helped me identify universities that matched my academic profile and career goals. They guided me through the entire application process, and I was thrilled to receive an acceptance letter from Texas State University along with an $11,000 scholarship! The interview preparation was thorough and comprehensive. We practiced multiple scenarios, and I felt confident walking into the embassy. When the officer stamped my passport with the F-1 visa, I couldn\'t contain my joy. Today, I\'m living my American dream, and I owe it all to the excellent guidance I received.',
-        visaImage: '/visa_f1.png',
+        visaImage: '/images/granted visa/fayaz.png',
     },
     {
         id: 2,
@@ -230,8 +230,9 @@ export default function SuccessStoriesPage() {
                                                 position: 'relative',
                                                 width: { xs: '100%', md: 320 },
                                                 minWidth: { md: 320 },
-                                                height: { xs: 200, md: 'auto' },
-                                                minHeight: { md: 280 },
+                                                maxWidth: { md: 320 },
+                                                height: { xs: 200, md: 280 },
+                                                flexShrink: 0,
                                             }}
                                         >
                                             <Image

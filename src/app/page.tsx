@@ -129,7 +129,7 @@ const successStories = [
     purpose: 'Academic Studies',
     country: 'Sri Lanka',
     story: 'My dream of studying in America came true! With expert guidance, I secured an $11,000 scholarship and my F-1 visa was approved on the first attempt.',
-    visaImage: '/visa_f1.png',
+    visaImage: '/images/granted visa/fayaz.png',
   },
   {
     name: 'Chameera Keerthirathne',
@@ -369,6 +369,85 @@ export default function Home() {
               >
                 Read More Client Reviews
               </Button>
+            </Box>
+          </ScrollAnimation>
+        </Container>
+      </Box>
+
+      {/* Partnerships Section */}
+      <Box
+        component="section"
+        sx={{
+          py: { xs: 8, md: 12 },
+          background: 'linear-gradient(135deg, rgba(59, 89, 152, 0.03) 0%, rgba(107, 141, 214, 0.06) 100%)',
+        }}
+      >
+        <Container maxWidth="lg">
+          <ScrollAnimation>
+            <Box textAlign="center" mb={6}>
+              <Typography
+                variant="h3"
+                fontWeight="bold"
+                sx={{ mb: 2, fontSize: { xs: '1.75rem', md: '2.5rem' } }}
+              >
+                Our <Box component="span" sx={{ color: 'primary.main' }}>Partners</Box>
+              </Typography>
+              <Typography
+                variant="h6"
+                color="text.secondary"
+                sx={{ maxWidth: 'md', mx: 'auto', fontWeight: 400 }}
+              >
+                Trusted partnerships with leading educational institutions worldwide
+              </Typography>
+            </Box>
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.2}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: { xs: 4, md: 6 },
+              }}
+            >
+              {[
+                { src: '/images/partnerships/20230410111847_file_EKA-removebg-preview.png', alt: 'EKA' },
+                { src: '/images/partnerships/Logo-transparent-GCM-01-300x63-1.png', alt: 'GCM' },
+                { src: '/images/partnerships/Logo_of_Transport_and_Telecommunication_Institute-removebg-preview.png', alt: 'TTI' },
+                { src: '/images/partnerships/gbs-malta.png', alt: 'GBS Malta' },
+                { src: '/images/partnerships/rtu_logo_en-removebg-preview.png', alt: 'RTU' },
+              ].map((partner, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    p: 2,
+                    filter: 'grayscale(100%)',
+                    opacity: 0.7,
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      filter: 'grayscale(0%)',
+                      opacity: 1,
+                      transform: 'scale(1.05)',
+                    },
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={partner.src}
+                    alt={partner.alt}
+                    sx={{
+                      maxWidth: { xs: 120, md: 160 },
+                      maxHeight: { xs: 60, md: 80 },
+                      objectFit: 'contain',
+                    }}
+                  />
+                </Box>
+              ))}
             </Box>
           </ScrollAnimation>
         </Container>

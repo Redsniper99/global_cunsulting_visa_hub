@@ -100,26 +100,7 @@ export default function ServiceCard({
                 </Box>
             )}
 
-            {/* Arrow */}
-            {href && (
-                <Box
-                    className="learn-more"
-                    sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 1,
-                        color: 'primary.main',
-                        fontWeight: 600,
-                        fontSize: '0.875rem',
-                        opacity: 0,
-                        transform: 'translateX(-10px)',
-                        transition: 'all 0.3s ease'
-                    }}
-                >
-                    Learn more
-                    <ArrowForwardIcon fontSize="small" />
-                </Box>
-            )}
+
         </Card>
     );
 
