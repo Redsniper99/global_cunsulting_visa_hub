@@ -23,8 +23,8 @@ const outfit = Outfit({
   display: "swap",
 });
 
-// Your website URL - update this when you deploy
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://globalconsultingvisahub.com';
+// Your website URL
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://globalconsultingandvisahub.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
