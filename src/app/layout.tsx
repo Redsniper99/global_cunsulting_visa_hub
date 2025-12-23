@@ -32,8 +32,32 @@ export const metadata: Metadata = {
     default: "Global Consulting & Visa Hub | US & Schengen Visa Experts",
     template: "%s | Global Consulting & Visa Hub"
   },
-  description: "Your trusted partner for US and Schengen visa consulting. Expert guidance, transparent process, and personalized support for students, families, and professionals. Over 8 years of experience with high approval outcomes.",
-  keywords: ["visa consulting", "US visa", "Schengen visa", "student visa", "F-1 visa", "tourist visa", "B1 B2 visa", "immigration consulting", "visa application", "visa services Sri Lanka"],
+  description: "Best USA Licensed Visa Consultant in Sri Lanka. Expert guidance for US visa, USA visa, Schengen visa applications. 8+ years experience, 50+ successful cases. Free consultation for student visa, tourist visa, B1/B2 visa from Sri Lanka.",
+  keywords: [
+    // Primary keywords
+    "US visa Sri Lanka",
+    "USA visa Sri Lanka",
+    "USA licensed consultant",
+    "USA licensed visa consultant Sri Lanka",
+    "US visa consultant",
+    // Visa types
+    "F-1 student visa Sri Lanka",
+    "B1 B2 visa Sri Lanka",
+    "tourist visa USA from Sri Lanka",
+    "US student visa consultant",
+    "Schengen visa Sri Lanka",
+    "Europe visa Sri Lanka",
+    // Brand & service keywords
+    "visa consulting Sri Lanka",
+    "best visa consultant Sri Lanka",
+    "immigration consultant Sri Lanka",
+    "visa application help",
+    "visa interview preparation",
+    // Location keywords
+    "Colombo visa consultant",
+    "Sri Lanka to USA visa",
+    "American visa Sri Lanka"
+  ],
   authors: [{ name: "Global Consulting & Visa Hub" }],
   creator: "Global Consulting & Visa Hub",
   publisher: "Global Consulting & Visa Hub",
