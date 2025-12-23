@@ -45,7 +45,7 @@ export default function Footer() {
                         <Box sx={{ display: 'flex', gap: 2 }}>
                             <IconButton
                                 component="a"
-                                href="https://wa.me/19367884084"
+                                href="https://wa.me/94777468806"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="WhatsApp"

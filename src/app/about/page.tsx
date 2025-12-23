@@ -134,7 +134,7 @@ export default function AboutPage() {
 
                                             <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 2 }}>
                                                 <Typography variant="body2" lineHeight={1.8}>
-                                                    Ms. Bandara is a Professional Licensed Consultant with over 5 years of experience
+                                                    Ms. Bandara is a Professional Licensed Consultant with over 8 years of experience
                                                     in the USA consulting industry. She completed her undergraduate studies in Texas,
                                                     USA, where she developed strong competency in law with solid academic knowledge.
                                                 </Typography>

@@ -72,7 +72,7 @@ const faqCategories = [
             },
             {
                 question: 'What makes you different from other visa consultants?',
-                answer: 'Our founder, Ms. Shamlee Bandara, is a USA Licensed Consultant with over 5 years of experience and currently works as a US Immigration Paralegal. This combination of academic knowledge, practical experience, and ongoing professional involvement gives us unique insights into successful visa applications.',
+                answer: 'Our founder, Ms. Shamlee Bandara, is a USA Licensed Consultant with over 8 years of experience and currently works as a US Immigration Paralegal. This combination of academic knowledge, practical experience, and ongoing professional involvement gives us unique insights into successful visa applications.',
             },
             {
                 question: 'Do you guarantee visa approval?',
@@ -193,7 +193,7 @@ export default function FAQPage() {
                                     variant="outlined"
                                     size="large"
                                     startIcon={<WhatsAppIcon />}
-                                    href="https://wa.me/19367884084"
+                                    href="https://wa.me/94777468806"
                                     target="_blank"
                                     sx={{
                                         px: 4,

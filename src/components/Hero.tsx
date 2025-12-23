@@ -32,10 +32,10 @@ interface HeroProps {
 export default function Hero({
     title = 'Global Consulting & Visa Hub',
     subtitle = 'Your Trusted Partner for US & Schengen Visa Success',
-    description = 'Expert guidance, transparent process, and personalized support for students, families, and professionals. Over 5 years of experience helping clients achieve their visa goals with high approval outcomes.',
-    mobileDescription = 'Expert visa guidance for students, families & professionals. 5+ years experience with high approval rates.',
+    description = 'Expert guidance, transparent process, and personalized support for students, families, and professionals. Over 8 years of experience helping clients achieve their visa goals with high approval outcomes.',
+    mobileDescription = 'Expert visa guidance for students, families & professionals. 8+ years experience with high approval rates.',
     primaryCTA = { text: 'Book a Free Consultation', href: '/contact' },
-    secondaryCTA = { text: 'WhatsApp Us', href: 'https://wa.me/19367884084' },
+    secondaryCTA = { text: 'WhatsApp Us', href: 'https://wa.me/94777468806' },
     showBadge = true,
 }: HeroProps) {
 
@@ -290,12 +290,12 @@ export default function Hero({
                                     gap: 2
                                 }}>
                                     <Box textAlign="center">
-                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '1.25rem' }}>5+</Typography>
+                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '1.25rem' }}>8+</Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.7rem' }}>Years</Typography>
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{ height: 30, alignSelf: 'center' }} />
                                     <Box textAlign="center">
-                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '1.25rem' }}>500+</Typography>
+                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '1.25rem' }}>50+</Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.7rem' }}>Cases</Typography>
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{ height: 30, alignSelf: 'center' }} />
@@ -325,12 +325,12 @@ export default function Hero({
                                     gap: 4
                                 }}>
                                     <Box textAlign="center">
-                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '2.125rem' }}>5+</Typography>
+                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '2.125rem' }}>8+</Typography>
                                         <Typography variant="body2" color="text.secondary">Years Experience</Typography>
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{ height: 40, alignSelf: 'center' }} />
                                     <Box textAlign="center">
-                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '2.125rem' }}>500+</Typography>
+                                        <Typography variant="h4" color="primary" fontWeight="bold" sx={{ fontSize: '2.125rem' }}>50+</Typography>
                                         <Typography variant="body2" color="text.secondary">Successful Cases</Typography>
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{ height: 40, alignSelf: 'center' }} />

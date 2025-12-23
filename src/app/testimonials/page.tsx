@@ -52,8 +52,8 @@ const testimonials = [
 ];
 
 const stats = [
-    { value: '500+', label: 'Successful Cases' },
-    { value: '5+', label: 'Years Experience' },
+    { value: '50+', label: 'Successful Cases' },
+    { value: '8+', label: 'Years Experience' },
     { value: '98%', label: 'Client Satisfaction' },
     { value: '24/7', label: 'Support Available' },
 ];

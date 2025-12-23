@@ -151,7 +151,7 @@ export default function UnderMaintenance() {
                             </Typography>
 
                             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, justifyContent: 'center' }}>
-                                <Link href="https://wa.me/19367884084" passHref target="_blank">
+                                <Link href="https://wa.me/94777468806" passHref target="_blank">
                                     <Button
                                         variant="contained"
                                         size="large"

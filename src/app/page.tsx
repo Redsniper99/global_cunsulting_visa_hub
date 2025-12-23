@@ -32,7 +32,7 @@ const features = [
   {
     icon: <VerifiedUserOutlinedIcon sx={{ fontSize: 32 }} />,
     title: 'Licensed & Trusted',
-    description: 'USA Licensed Consultant with over 5 years of experience in visa consulting and immigration procedures.',
+    description: 'USA Licensed Consultant with over 8 years of experience in visa consulting and immigration procedures.',
   },
   {
     icon: <VisibilityOutlinedIcon sx={{ fontSize: 32 }} />,

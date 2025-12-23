@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
                             <h3 style="color: #3B5998; margin-top: 0;">Need Immediate Assistance?</h3>
                             <p style="margin-bottom: 10px;">
                                 <strong>WhatsApp:</strong> 
-                                <a href="https://wa.me/19367884084" style="color: #25D366;">+1 936 788 4084</a>
+                                <a href="https://wa.me/94777468806" style="color: #25D366;">+94 77 746 8806</a>
                             </p>
                             <p style="margin-bottom: 0;">
                                 <strong>Email:</strong> 

@@ -344,7 +344,7 @@ export default function ContactPage() {
                                                     </Typography>
                                                     <Typography
                                                         component="a"
-                                                        href="https://wa.me/19367884084"
+                                                        href="https://wa.me/94777468806"
                                                         target="_blank"
                                                         sx={{ color: '#25D366', fontWeight: 500, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
                                                     >

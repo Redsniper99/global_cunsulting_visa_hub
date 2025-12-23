@@ -27,7 +27,7 @@ export default function CTASection({
     title = "Ready to Start Your Visa Journey?",
     description = "Book a free consultation with our expert team and take the first step towards your American or European dream.",
     primaryCTA = { text: 'Book a Free Consultation', href: '/contact' },
-    secondaryCTA = { text: 'WhatsApp Us', href: 'https://wa.me/19367884084', isWhatsApp: true },
+    secondaryCTA = { text: 'WhatsApp Us', href: 'https://wa.me/94777468806', isWhatsApp: true },
     variant = 'default',
 }: CTASectionProps) {
     const isGradient = variant === 'gradient';
