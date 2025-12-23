@@ -122,6 +122,52 @@ const theme = createTheme({
                 },
             },
         },
+        MuiMenu: {
+            styleOverrides: {
+                paper: {
+                    backgroundColor: '#ffffff',
+                    backgroundImage: 'none',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+                    borderRadius: 12,
+                    border: '1px solid rgba(59, 89, 152, 0.1)',
+                    marginTop: 4,
+                },
+                list: {
+                    padding: '8px 0',
+                },
+            },
+        },
+        MuiMenuItem: {
+            styleOverrides: {
+                root: {
+                    padding: '10px 16px',
+                    '&:hover': {
+                        backgroundColor: 'rgba(59, 89, 152, 0.08)',
+                    },
+                    '&.Mui-selected': {
+                        backgroundColor: 'rgba(59, 89, 152, 0.12)',
+                        '&:hover': {
+                            backgroundColor: 'rgba(59, 89, 152, 0.16)',
+                        },
+                    },
+                },
+            },
+        },
+        MuiSelect: {
+            styleOverrides: {
+                icon: {
+                    color: '#64748B',
+                },
+            },
+        },
+        MuiPopover: {
+            styleOverrides: {
+                paper: {
+                    backgroundColor: '#ffffff',
+                    backgroundImage: 'none',
+                },
+            },
+        },
     },
 });
 

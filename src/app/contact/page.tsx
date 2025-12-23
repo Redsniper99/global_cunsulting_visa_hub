@@ -213,6 +213,33 @@ export default function ContactPage() {
                                                         value={formData.visaType}
                                                         onChange={handleChange}
                                                         required
+                                                        slotProps={{
+                                                            select: {
+                                                                MenuProps: {
+                                                                    PaperProps: {
+                                                                        sx: {
+                                                                            bgcolor: 'background.paper',
+                                                                            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+                                                                            borderRadius: 2,
+                                                                            mt: 1,
+                                                                            '& .MuiMenuItem-root': {
+                                                                                py: 1.5,
+                                                                                px: 2,
+                                                                                '&:hover': {
+                                                                                    bgcolor: 'rgba(59, 89, 152, 0.08)',
+                                                                                },
+                                                                                '&.Mui-selected': {
+                                                                                    bgcolor: 'rgba(59, 89, 152, 0.12)',
+                                                                                    '&:hover': {
+                                                                                        bgcolor: 'rgba(59, 89, 152, 0.16)',
+                                                                                    },
+                                                                                },
+                                                                            },
+                                                                        },
+                                                                    },
+                                                                },
+                                                            },
+                                                        }}
                                                     >
                                                         {visaTypes.map(type => (
                                                             <MenuItem key={type} value={type}>{type}</MenuItem>
@@ -228,6 +255,33 @@ export default function ContactPage() {
                                                         value={formData.targetCountry}
                                                         onChange={handleChange}
                                                         required
+                                                        slotProps={{
+                                                            select: {
+                                                                MenuProps: {
+                                                                    PaperProps: {
+                                                                        sx: {
+                                                                            bgcolor: 'background.paper',
+                                                                            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+                                                                            borderRadius: 2,
+                                                                            mt: 1,
+                                                                            '& .MuiMenuItem-root': {
+                                                                                py: 1.5,
+                                                                                px: 2,
+                                                                                '&:hover': {
+                                                                                    bgcolor: 'rgba(59, 89, 152, 0.08)',
+                                                                                },
+                                                                                '&.Mui-selected': {
+                                                                                    bgcolor: 'rgba(59, 89, 152, 0.12)',
+                                                                                    '&:hover': {
+                                                                                        bgcolor: 'rgba(59, 89, 152, 0.16)',
+                                                                                    },
+                                                                                },
+                                                                            },
+                                                                        },
+                                                                    },
+                                                                },
+                                                            },
+                                                        }}
                                                     >
                                                         {targetCountries.map(country => (
                                                             <MenuItem key={country} value={country}>{country}</MenuItem>
