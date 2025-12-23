@@ -14,20 +14,21 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Create transporter - using Gmail SMTP
-        // For production, use environment variables for credentials
+        // Create transporter - using Zoho SMTP
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: process.env.EMAIL_HOST || 'smtp.zoho.com',
+            port: parseInt(process.env.EMAIL_PORT || '465'),
+            secure: process.env.EMAIL_SECURE === 'true', // true for 465, false for 587
             auth: {
-                user: process.env.EMAIL_USER || 'globalconsultingusa24@gmail.com',
-                pass: process.env.EMAIL_PASS || '', // App password required for Gmail
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
         // Email content to send to the business
         const mailOptions = {
-            from: `"Global Consulting Website" <${process.env.EMAIL_USER || 'globalconsultingusa24@gmail.com'}>`,
-            to: 'globalconsultingusa24@gmail.com',
+            from: `"Global Consulting Website" <${process.env.EMAIL_USER}>`,
+            to: process.env.EMAIL_TO || process.env.EMAIL_USER,
             replyTo: email,
             subject: `New Consultation Request - ${visaType}`,
             html: `
@@ -96,7 +97,7 @@ export async function POST(request: NextRequest) {
 
         // Optional: Send confirmation email to client
         const clientMailOptions = {
-            from: `"Global Consulting & Visa Hub" <${process.env.EMAIL_USER || 'globalconsultingusa24@gmail.com'}>`,
+            from: `"Global Consulting & Visa Hub" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'Thank you for contacting Global Consulting & Visa Hub',
             html: `
