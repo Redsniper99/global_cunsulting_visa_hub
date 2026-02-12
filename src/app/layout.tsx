@@ -9,7 +9,7 @@ import UnderMaintenance from "@/components/UnderMaintenance";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 // Set to true to show maintenance page, false to show normal site
-const MAINTENANCE_MODE = false;
+const MAINTENANCE_MODE = true;
 
 const inter = Inter({
   variable: "--font-inter",
