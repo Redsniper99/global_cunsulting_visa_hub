@@ -155,6 +155,18 @@ const successStories = [
     story: 'From document preparation to interview coaching, every step was handled perfectly. Now I am pursuing my MBA in Houston!',
     visaImage: '/visa_f1.png',
   },
+  {
+    name: 'Dayawathi',
+    visaType: 'B1/B2' as const,
+    appliedDate: 'Dec 2024',
+    grantedDate: 'Nov 2025',
+    university: '',
+    course: '',
+    purpose: 'Tourism & Family Visit',
+    country: 'Sri Lanka',
+    story: 'Successfully obtained my B1/B2 visa for tourism and visiting family in the US. The consultation and document preparation made the process smooth and stress-free.',
+    visaImage: '/images/granted visa/dayawathi.png',
+  },
 ];
 
 import SuccessStoryCard from '@/components/SuccessStoryCard';

@@ -106,6 +106,20 @@ const successStories = [
         fullStory: 'When I received an offer for a medical research fellowship in the United States, I was thrilled but also anxious about the visa process. J-1 visas for research positions have specific requirements, and I needed expert guidance. Global Consulting & Visa Hub demonstrated impressive expertise in handling specialized visa categories. They understood the nuances of research-based J-1 applications and helped me present my case effectively. The documentation process was detailed – from my research proposal to letters from my sponsoring institution, everything was organized perfectly. The interview preparation focused on articulating my research goals and demonstrating the value of this international collaboration. When my visa was approved, it validated my decision to trust the experts. I\'m now contributing to groundbreaking medical research in America, and this opportunity has been transformative for my career.',
         visaImage: '/visa_j1.png',
     },
+    {
+        id: 7,
+        name: 'Dayawathi',
+        visaType: 'B1/B2' as const,
+        appliedDate: 'Dec 2024',
+        grantedDate: 'Nov 2025',
+        university: '',
+        course: '',
+        purpose: 'Tourism & Family Visit',
+        country: 'Sri Lanka',
+        story: 'Successfully obtained my B1/B2 visa for tourism and visiting family in the US. The consultation and document preparation made the process smooth and stress-free.',
+        fullStory: 'Planning a trip to the United States for tourism and visiting family required obtaining a B1/B2 visa. The process seemed complex at first, but with professional guidance from Global Consulting & Visa Hub, everything became manageable. The team helped me prepare all necessary documents, including proof of ties to Sri Lanka, financial documentation, and my travel itinerary. The interview preparation was thorough, covering all potential questions about my visit purpose and plans to return home. On the interview day, I felt confident and well-prepared. The visa officer approved my application, and I was able to make my US trip as planned. The professional support throughout the process made a significant difference.',
+        visaImage: '/images/granted visa/dayawathi.png',
+    },
 ];
 
 const visaTypeConfig = {
