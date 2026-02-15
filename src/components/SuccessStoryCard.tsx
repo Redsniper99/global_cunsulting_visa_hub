@@ -15,7 +15,7 @@ import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
 
 interface SuccessStoryCardProps {
     name: string;
-    visaType: 'F-1' | 'J-1' | 'B1/B2' | 'F-2' | 'K-1';
+    visaType: 'F-1' | 'J-1' | 'B1/B2' | 'F-2' | 'J-2' | 'K-1' | 'C1/D';
     appliedDate: string;
     grantedDate: string;
     university?: string;
@@ -48,9 +48,19 @@ const visaTypeConfig = {
         color: '#FF9800',
         icon: <WorkOutlineOutlinedIcon fontSize="small" />,
     },
+    'J-2': {
+        label: 'J-2 Dependent',
+        color: '#9C27B0',
+        icon: <WorkOutlineOutlinedIcon fontSize="small" />,
+    },
     'K-1': {
         label: 'Fiancé Visa',
         color: '#E91E63',
+        icon: <WorkOutlineOutlinedIcon fontSize="small" />,
+    },
+    'C1/D': {
+        label: 'Crew Member',
+        color: '#795548',
         icon: <WorkOutlineOutlinedIcon fontSize="small" />,
     },
 };
