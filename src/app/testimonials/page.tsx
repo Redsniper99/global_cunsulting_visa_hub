@@ -16,37 +16,37 @@ const testimonials = [
     {
         name: 'Ayeshma Fayaz',
         visaType: 'F-1 Student Visa',
-        quote: 'I am writing this to give my highest recommendation for Global Consulting Visa Hub. I had the privilege of consulting Ms. Shamlee for my student visa process, and I successfully received my visa under her expert guidance! She not only helped me secure an $11,000 scholarship for my bachelor\'s program but also handled the entire process and documentation with great professionalism.',
+        quote: 'I am writing this to give my highest recommendation for Global Consulting Visa Hub. I had the privilege of consulting with their team for my student visa process, and I successfully received my visa under expert guidance! They not only helped me secure an $11,000 scholarship for my bachelor\'s program but also handled the entire process and documentation with great professionalism.',
         rating: 5,
     },
     {
         name: 'Chameera Keerthirathne',
         visaType: 'J-1 Exchange Visa',
-        quote: 'I\'m excited to share that we received our visas! I consulted Ms. Shamlee at Global Consulting Visa Hub for my J-1 visa and our children\'s dependent visas. It was a stressful and complex process, but Ms. Shamlee managed everything perfectly — from documentation to interview preparation and guidance. Thanks to her expertise, all three visas were approved successfully.',
+        quote: 'I\'m excited to share that we received our visas! I consulted Global Consulting Visa Hub for my J-1 visa and our children\'s dependent visas. It was a stressful and complex process, but the team managed everything perfectly — from documentation to interview preparation and guidance. Thanks to their expertise, all three visas were approved successfully.',
         rating: 5,
     },
     {
         name: 'Vindya Sakuni',
         visaType: 'F-1 & F-2 Visa',
-        quote: 'It is my pleasure to strongly recommend Shamlee to get the correct guidance on F1 and F2 visa process. I have started to work with Shamlee within a very short period of time. However, I realized that she is an easy person to communicate with. She informs us of all the procedures A to Z in the visa process. She prepares us well with all the documents and nothing to worry about. I will highly recommend her. I will keep trust in her.',
+        quote: 'It is my pleasure to strongly recommend Global Consulting Visa Hub for correct guidance on F1 and F2 visa process. Within a very short period of time, I realized the team is easy to communicate with. They inform us of all the procedures A to Z in the visa process. They prepare us well with all the documents and nothing to worry about. I will highly recommend them. I will keep trust in them.',
         rating: 5,
     },
     {
         name: 'Tharinda Vimukthi',
         visaType: 'USA Immigration',
-        quote: 'I highly recommend this page for everyone who is willing to migrate to Americas in the future. As a student, as an individual, as a tourist, as a family all these ways you can get all in details information and advices. The adviser Shamlee, is nice and friendly person you can ask any questions for any clarifications regarding immigration matters. She is the best person to get answers.',
+        quote: 'I highly recommend this page for everyone who is willing to migrate to Americas in the future. As a student, as an individual, as a tourist, as a family all these ways you can get all in details information and advices. The consultants are nice and friendly, you can ask any questions for any clarifications regarding immigration matters. They are the best people to get answers.',
         rating: 5,
     },
     {
         name: 'Lihinika Kristhorubaduge',
         visaType: 'F-2 Spouse Visa',
-        quote: 'I consulted Ms Shamlee for Spouse visa for Student. I was in so many doubts, I didn\'t have much of an idea of spouse process but she explained me everything and how the documents need to be prepared for this Visa. She has good sound and knowledge about the USA Consultancy. I can recommend her to anyone for USA Visas and Consultations.',
+        quote: 'I consulted Global Consulting Visa Hub for Spouse visa for Student. I was in so many doubts, I didn\'t have much of an idea of spouse process but the team explained me everything and how the documents need to be prepared for this Visa. They have good sound and knowledge about the USA Consultancy. I can recommend them to anyone for USA Visas and Consultations.',
         rating: 5,
     },
     {
         name: 'Aravinda Akurugoda',
         visaType: 'Canadian Visitor Visa',
-        quote: 'I\'m a professional cricketer and I consulted Ms Shamlee for a Canadian Visitor Visa. Even though she doesn\'t do Canadian visas, she advised me regarding the documentation preparation and was willing enough to give me the consultation before starting the process. I highly recommend her 100%.',
+        quote: 'I\'m a professional cricketer and I consulted Global Consulting Visa Hub for a Canadian Visitor Visa. Even though they don\'t do Canadian visas, they advised me regarding the documentation preparation and were willing enough to give me the consultation before starting the process. I highly recommend them 100%.',
         rating: 5,
     },
 ];

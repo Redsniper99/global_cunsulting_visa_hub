@@ -46,8 +46,8 @@ const successStories = [
         course: 'Cultural Exchange',
         purpose: 'Exchange Program',
         country: 'Sri Lanka',
-        story: 'Got my J-1 visa along with dependent visas for my children. The entire process was handled professionally despite being complex. Ms. Shamlee managed everything from documentation to interview preparation with great expertise.',
-        fullStory: 'As a professional seeking an exchange opportunity in the United States, I faced the challenge of not only obtaining my own J-1 visa but also securing dependent visas for my family. This made the process significantly more complex. Global Consulting & Visa Hub took on this challenge with remarkable professionalism. Ms. Shamlee personally handled our case, ensuring that all documentation was perfectly prepared for each family member. The attention to detail was impressive – from organizing our financial documents to preparing customized interview responses for different scenarios. When the day of our interview arrived, we were well-prepared and confident. The joy of receiving approval for all our visas simultaneously was indescribable. Our family is now enjoying this incredible cultural exchange experience in America, and we are grateful for the expert guidance that made it possible.',
+        story: 'Got my J-1 visa along with dependent visas for my children. The entire process was handled professionally despite being complex. The team managed everything from documentation to interview preparation with great expertise.',
+        fullStory: 'As a professional seeking an exchange opportunity in the United States, I faced the challenge of not only obtaining my own J-1 visa but also securing dependent visas for my family. This made the process significantly more complex. Global Consulting & Visa Hub took on this challenge with remarkable professionalism. The team personally handled our case, ensuring that all documentation was perfectly prepared for each family member. The attention to detail was impressive – from organizing our financial documents to preparing customized interview responses for different scenarios. When the day of our interview arrived, we were well-prepared and confident. The joy of receiving approval for all our visas simultaneously was indescribable. Our family is now enjoying this incredible cultural exchange experience in America, and we are grateful for the expert guidance that made it possible.',
         visaImage: '/visa_j1.png',
     },
     {
@@ -176,6 +176,62 @@ const successStories = [
         fullStory: 'Working as a crew member on international vessels operating in US waters required obtaining a C1/D visa, which combines transit and crew member privileges. The application process involved specific requirements for maritime employment, including seafarer documentation, employment contracts, and proof of vessel operations. Professional consulting support helped organize all necessary documents, including seafarer\'s book, employment letters, vessel details, and travel documentation. Interview preparation focused on clearly explaining the nature of maritime work, vessel itineraries, and compliance with visa requirements. The thorough preparation and accurate documentation led to successful visa approval, enabling employment on international vessels with US port calls.',
         visaImage: '/images/granted visa/Thejan Nipuna.png',
     },
+    {
+        id: 12,
+        name: 'Galanadale',
+        visaType: 'Schengen-Visit' as const,
+        appliedDate: 'Nov 2024',
+        grantedDate: 'Dec 2024',
+        university: '',
+        course: '',
+        purpose: 'Tourism & Sightseeing',
+        country: 'Sri Lanka',
+        story: 'Successfully obtained a Schengen visiting visa to Germany. The expert document preparation and consultation made the process smooth and stress-free.',
+        fullStory: 'Obtaining a Schengen visiting visa to travel to Germany required careful preparation of financial documents, travel itinerary, accommodation proof, and strong ties to home country. Professional consulting support helped organize all required documents systematically and ensured everything met the embassy requirements. The application process was guided step by step, from selecting the correct visa category to preparing for potential interview questions. With well-organized documentation and a clear travel plan, the visa was approved, enabling a memorable trip to Germany.',
+        visaImage: '/images/granted visa/Galanadale.png',
+    },
+    {
+        id: 13,
+        name: 'Rathnayake',
+        visaType: 'Schengen-Student' as const,
+        appliedDate: 'Oct 2024',
+        grantedDate: 'Nov 2024',
+        university: 'University of Latvia',
+        course: 'Student Visa',
+        purpose: 'Academic Studies',
+        country: 'Sri Lanka',
+        story: 'Received Schengen student visa approval to study in Latvia. Professional guidance helped navigate the application process from start to finish successfully.',
+        fullStory: 'Pursuing academic studies in Latvia required a Schengen student visa, which involved university admission, financial documentation, accommodation proof, and health insurance. Professional consulting support guided the entire process, ensuring all documents were prepared accurately and submitted correctly. Interview preparation focused on articulating study plans and demonstrating the intent to return home after completing the program. With thorough preparation and expert guidance, the visa was approved smoothly, opening the door to quality education in Europe.',
+        visaImage: '/images/granted visa/Latvia Rathnayake.png',
+    },
+    {
+        id: 14,
+        name: 'Amugoda',
+        visaType: 'Schengen-Student' as const,
+        appliedDate: 'Oct 2024',
+        grantedDate: 'Nov 2024',
+        university: 'University of Latvia',
+        course: 'Student Visa',
+        purpose: 'Academic Studies',
+        country: 'Sri Lanka',
+        story: 'Secured Schengen student visa for studies in Latvia. Thorough document preparation and interview guidance ensured a successful first-attempt approval.',
+        fullStory: 'Applying for a Schengen student visa to study in Latvia involved gathering university acceptance letters, proof of financial means, travel insurance, and accommodation details. Expert consulting support helped streamline the document collection process and ensured every requirement was met. The application was presented clearly and professionally, demonstrating academic intent and financial stability. Guidance on potential visa interview questions helped build confidence. The visa was approved on the first attempt, making the dream of studying in Europe a reality.',
+        visaImage: '/images/granted visa/Latvia_Amugoda.png',
+    },
+    {
+        id: 15,
+        name: 'Ranasinghe',
+        visaType: 'Schengen-Student' as const,
+        appliedDate: 'Oct 2024',
+        grantedDate: 'Nov 2024',
+        university: 'University of Latvia',
+        course: 'Student Visa',
+        purpose: 'Academic Studies',
+        country: 'Sri Lanka',
+        story: 'Approved for Schengen student visa to pursue studies in Latvia. Expert support throughout the application process led to a smooth and successful outcome.',
+        fullStory: 'Securing a Schengen student visa for academic studies in Latvia required comprehensive documentation, including university enrollment, financial statements, travel insurance, and proof of accommodation. Professional consulting guided the preparation of every document, ensuring compliance with embassy requirements. The application was structured to clearly demonstrate academic goals and financial readiness. Support throughout the process helped navigate each step confidently, resulting in a successful visa approval that enabled the start of an academic journey in Latvia.',
+        visaImage: '/images/granted visa/ranasinghe Latvia.png',
+    },
 ];
 
 const visaTypeConfig = {
@@ -220,6 +276,18 @@ const visaTypeConfig = {
         color: '#795548',
         bgColor: 'rgba(121, 85, 72, 0.1)',
         icon: <WorkOutlineOutlinedIcon fontSize="small" />,
+    },
+    'Schengen-Visit': {
+        label: 'Schengen Visit',
+        color: '#00897B',
+        bgColor: 'rgba(0, 137, 123, 0.1)',
+        icon: <FlightTakeoffOutlinedIcon fontSize="small" />,
+    },
+    'Schengen-Student': {
+        label: 'Schengen Student',
+        color: '#1565C0',
+        bgColor: 'rgba(21, 101, 192, 0.1)',
+        icon: <SchoolOutlinedIcon fontSize="small" />,
     },
 };
 
@@ -322,6 +390,8 @@ export default function SuccessStoriesPage() {
                                                 alt={`${story.name}'s approved visa`}
                                                 fill
                                                 style={{ objectFit: 'cover' }}
+                                                sizes="(max-width: 768px) 100vw, 320px"
+                                                loading="lazy"
                                             />
                                             {/* Gradient Overlay */}
                                             <Box

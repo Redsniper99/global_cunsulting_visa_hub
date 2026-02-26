@@ -387,6 +387,7 @@ export default function Hero({
                                         alt="Visa consultant helping clients"
                                         fill
                                         style={{ objectFit: 'contain', objectPosition: 'center top' }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                                         priority
                                     />
                                 </Box>
@@ -417,6 +418,7 @@ export default function Hero({
                                             alt="Passport decoration"
                                             fill
                                             style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
+                                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 35vw"
                                         />
                                     </motion.div>
                                 </Box>

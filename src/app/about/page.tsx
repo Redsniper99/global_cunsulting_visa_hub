@@ -80,26 +80,31 @@ export default function AboutPage() {
                 </Container>
             </Box>
 
-            {/* Founder Section - Moved to top */}
+            {/* Leadership Section */}
             <Box component="section" sx={{ py: 12, background: 'linear-gradient(135deg, #FAFBFF 0%, #F3F6FF 100%)' }}>
                 <Container>
                     <ScrollAnimation>
                         <Box textAlign="center" mb={8}>
                             <Typography variant="h3" fontWeight="bold" sx={{ mb: 2 }}>
-                                Meet Our <Box component="span" sx={{ color: 'primary.main' }}>Founder</Box>
+                                Meet Our <Box component="span" sx={{ color: 'primary.main' }}>Leadership</Box>
+                            </Typography>
+                            <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 400 }}>
+                                The people behind Global Consulting &amp; Visa Hub
                             </Typography>
                         </Box>
                     </ScrollAnimation>
 
-                    <Container maxWidth="md">
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+
+                        {/* Derick Marambe - Founder */}
                         <GlassCard hover={false}>
                             <Box sx={{ p: { xs: 2, md: 4 } }}>
                                 <Grid container spacing={6} alignItems="flex-start">
                                     <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <Box sx={{ position: 'relative' }}>
                                             <Image
-                                                src="/AboutPic2.png.webp"
-                                                alt="Shamlee Marambe Bandara"
+                                                src="/Derick Marambe.png"
+                                                alt="Derick Marambe"
                                                 width={200}
                                                 height={200}
                                                 style={{ borderRadius: 16, objectFit: 'cover' }}
@@ -120,54 +125,94 @@ export default function AboutPage() {
                                                     boxShadow: 3
                                                 }}
                                             >
-                                                🎓
+                                                🌟
                                             </Box>
                                         </Box>
                                     </Grid>
                                     <Grid size={{ xs: 12, md: 8 }}>
                                         <Box textAlign={{ xs: 'center', md: 'left' }}>
                                             <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
-                                                Shamlee Marambe Bandara
+                                                Derick Marambe
                                             </Typography>
                                             <Typography variant="subtitle1" color="primary" fontWeight="bold" sx={{ mb: 3 }}>
-                                                Academic Lawyer | USA Licensed Consultant | US Immigration Paralegal
+                                                Founder &amp; Guiding Mentor
                                             </Typography>
-
                                             <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 2 }}>
                                                 <Typography variant="body2" lineHeight={1.8}>
-                                                    Ms. Bandara is a Professional Licensed Consultant with over 8 years of experience
-                                                    in the USA consulting industry. She completed her undergraduate studies in Texas,
-                                                    USA, where she developed strong competency in law with solid academic knowledge.
+                                                    Derick Marambe served as a Senior Accountant at the Education Department in Kandy, dedicating his professional life to public service with integrity, discipline, and excellence. In the 1950s, he successfully passed the Sri Lankan Public Service competitive examination — at the time among the highest and most prestigious pathways to enter government service.
                                                 </Typography>
                                                 <Typography variant="body2" lineHeight={1.8}>
-                                                    Currently working as a US Immigration Paralegal for a well-known USA Immigration
-                                                    Law firm, she has directed and assisted many candidates and clients to the USA
-                                                    on various visas, particularly student visas (F-1).
+                                                    He further distinguished himself by passing the Ceylon Civil Service (CCS) examination — the elite administrative service of the country during that era. Only a very small number of candidates were selected each year, and the examination rigorously tested English proficiency, law, public administration, economics, and governance. Through this accomplishment, he qualified to serve at the highest levels of district administration.
                                                 </Typography>
                                                 <Typography variant="body2" lineHeight={1.8}>
-                                                    Her specialty lies in handling previously rejected visa cases with remarkable
-                                                    success. Her expertise includes immigration law (USA), student consultation,
-                                                    and acquiring student visas (F-1), exchange visitor visas (J-1), and business
-                                                    and visitor visas (B-1/B-2).
+                                                    In the 1960s, he was also among the very few individuals in Sri Lanka to successfully pass the competitive piloting examination. Although offered a career in aviation, he chose stability and public service. As the guiding mentor of this organization, his legacy of ethical leadership, resilience, and humility forms the foundation of our commitment to integrity and people-first service.
                                                 </Typography>
-                                            </Box>
-
-                                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mt: 4, justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                                                <Box component="a" href="mailto:globalconsultingusa24@gmail.com" sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'primary.main', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
-                                                    <EmailIcon fontSize="small" />
-                                                    <Typography variant="body2">globalconsultingusa24@gmail.com</Typography>
-                                                </Box>
-                                                <Box component="a" href="tel:+19367884084" sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'primary.main', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
-                                                    <PhoneIcon fontSize="small" />
-                                                    <Typography variant="body2">+1 936 788 4084</Typography>
-                                                </Box>
                                             </Box>
                                         </Box>
                                     </Grid>
                                 </Grid>
                             </Box>
                         </GlassCard>
-                    </Container>
+
+                        {/* Indu Marambe - Advisor */}
+                        <GlassCard hover={false}>
+                            <Box sx={{ p: { xs: 2, md: 4 } }}>
+                                <Grid container spacing={6} alignItems="flex-start">
+                                    <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                        <Box sx={{ position: 'relative' }}>
+                                            <Image
+                                                src="/Indu Marambe.jpg"
+                                                alt="Indu Marambe"
+                                                width={200}
+                                                height={200}
+                                                style={{ borderRadius: 16, objectFit: 'cover' }}
+                                            />
+                                            <Box
+                                                sx={{
+                                                    position: 'absolute',
+                                                    bottom: -10,
+                                                    right: -10,
+                                                    width: 50,
+                                                    height: 50,
+                                                    borderRadius: '50%',
+                                                    background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontSize: '1.5rem',
+                                                    boxShadow: 3
+                                                }}
+                                            >
+                                                🌐
+                                            </Box>
+                                        </Box>
+                                    </Grid>
+                                    <Grid size={{ xs: 12, md: 8 }}>
+                                        <Box textAlign={{ xs: 'center', md: 'left' }}>
+                                            <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
+                                                Indu Marambe
+                                            </Typography>
+                                            <Typography variant="subtitle1" color="primary" fontWeight="bold" sx={{ mb: 3 }}>
+                                                Advisor
+                                            </Typography>
+                                            <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                                <Typography variant="body2" lineHeight={1.8}>
+                                                    Indu Marambe has built a distinguished career in public service, having served in the Foreign Ministry, including within the Human Rights Division. Throughout her tenure, she worked across multiple ministries, contributing expertise to public administration, governance, and policy implementation. She also served as Media Coordinator to a Cabinet Minister, managing press relations and strategic media engagement.
+                                                </Typography>
+                                                <Typography variant="body2" lineHeight={1.8}>
+                                                    An experienced journalist, she combines analytical depth with a strong commitment to truth and accountability. Following the footsteps of her father, she inherited a strong intellectual foundation and dedication to service.
+                                                </Typography>
+                                                <Typography variant="body2" lineHeight={1.8}>
+                                                    Currently based in Italy, she continues her professional journey in immigration as a Sinhala–Italian translator, supporting individuals navigating cross-border legal and administrative processes. Her extensive experience across government service, human rights, and immigration brings valuable international perspective and credibility to the organization.
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+                        </GlassCard>
+
+                    </Box>
                 </Container>
             </Box>
 

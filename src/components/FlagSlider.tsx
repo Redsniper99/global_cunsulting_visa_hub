@@ -90,6 +90,7 @@ export default function FlagSlider() {
                                 <img
                                     src={`https://flagcdn.com/w80/${country.code}.png`}
                                     alt={`${country.name} flag`}
+                                    loading="lazy"
                                     style={{
                                         width: '100%',
                                         height: '100%',

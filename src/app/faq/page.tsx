@@ -28,7 +28,7 @@ const faqCategories = [
             },
             {
                 question: 'Can you help with rejected visa cases?',
-                answer: 'Yes! Handling previously rejected visa cases is one of our specialties. Ms. Shamlee Bandara has extensive experience in analyzing rejection reasons, strengthening applications, and preparing clients for successful reapplication. Each case is evaluated individually to identify areas of improvement.',
+                answer: 'Yes! Handling previously rejected visa cases is one of our specialties. Our team has extensive experience in analyzing rejection reasons, strengthening applications, and preparing clients for successful reapplication. Each case is evaluated individually to identify areas of improvement.',
             },
             {
                 question: 'Do I need to travel to your office for consultation?',
@@ -72,7 +72,7 @@ const faqCategories = [
             },
             {
                 question: 'What makes you different from other visa consultants?',
-                answer: 'Our founder, Ms. Shamlee Bandara, is a USA Licensed Consultant with over 8 years of experience and currently works as a US Immigration Paralegal. This combination of academic knowledge, practical experience, and ongoing professional involvement gives us unique insights into successful visa applications.',
+                answer: 'Our organization is built on a foundation of public service excellence and international expertise. With the mentorship of Derick Marambe — a former Ceylon Civil Service officer — and the guidance of advisor Indu Marambe, who has served in the Foreign Ministry and is a Sinhala–Italian immigration translator, we bring a unique combination of integrity, governance experience, and immigration knowledge to every client.',
             },
             {
                 question: 'Do you guarantee visa approval?',

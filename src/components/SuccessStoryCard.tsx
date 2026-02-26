@@ -15,7 +15,7 @@ import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
 
 interface SuccessStoryCardProps {
     name: string;
-    visaType: 'F-1' | 'J-1' | 'B1/B2' | 'F-2' | 'J-2' | 'K-1' | 'C1/D';
+    visaType: 'F-1' | 'J-1' | 'B1/B2' | 'F-2' | 'J-2' | 'K-1' | 'C1/D' | 'Schengen-Visit' | 'Schengen-Student';
     appliedDate: string;
     grantedDate: string;
     university?: string;
@@ -63,6 +63,16 @@ const visaTypeConfig = {
         color: '#795548',
         icon: <WorkOutlineOutlinedIcon fontSize="small" />,
     },
+    'Schengen-Visit': {
+        label: 'Schengen Visit',
+        color: '#00897B',
+        icon: <FlightTakeoffOutlinedIcon fontSize="small" />,
+    },
+    'Schengen-Student': {
+        label: 'Schengen Student',
+        color: '#1565C0',
+        icon: <SchoolOutlinedIcon fontSize="small" />,
+    },
 };
 
 export default function SuccessStoryCard({
@@ -109,6 +119,8 @@ export default function SuccessStoryCard({
                         alt={`${name}'s approved visa`}
                         fill
                         style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        loading="lazy"
                     />
                     {/* Approved Badge */}
                     <Box
