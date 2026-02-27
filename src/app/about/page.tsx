@@ -103,7 +103,7 @@ export default function AboutPage() {
                                     <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <Box sx={{ position: 'relative' }}>
                                             <Image
-                                                src="/Derick Marambe.png"
+                                                src="/Derick Marambe n.jpg"
                                                 alt="Derick Marambe"
                                                 width={200}
                                                 height={200}
