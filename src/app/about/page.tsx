@@ -170,15 +170,21 @@ export default function AboutPage() {
                                         <Typography variant="h5" fontWeight="bold" sx={{ mb: 0.5 }}>
                                             Shamlee Marambe
                                         </Typography>
-                                        <Typography variant="subtitle2" color="primary" fontWeight="bold" sx={{ mb: 2.5 }}>
-                                            Lead Consultant
+                                        <Typography variant="subtitle2" color="primary" fontWeight="bold" sx={{ mb: 2.5, display: 'block' }}>
+                                            U.S. Immigration Consultant&nbsp;|&nbsp;Immigration Paralegal&nbsp;|&nbsp;Legal Operations
                                         </Typography>
                                         <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 1.5, textAlign: 'left' }}>
                                             <Typography variant="body2" lineHeight={1.8}>
-                                                Shamlee Marambe is a USA Licensed Immigration Consultant with over 8 years of experience in US visa consulting. She holds a Bachelor of Laws (LLB) and currently serves as a US Immigration Paralegal, giving her deep, practical knowledge of immigration procedures from both advisory and legal perspectives.
+                                                Shamlee Marambe Bandara is a USA Licensed Immigration Consultant with over 8 years of experience in U.S. visa consulting. She holds a Bachelor of Laws (LLB) and a Master of Laws (LLM) from the United Kingdom, and completed part of her undergraduate studies in Texas, USA.
                                             </Typography>
                                             <Typography variant="body2" lineHeight={1.8}>
-                                                Her expertise spans F-1, J-1, B-1/B-2, K-1, and dependent visa categories. She is particularly known for her success in handling previously rejected cases, turning difficult situations into successful outcomes through thorough preparation and personalized guidance.
+                                                Shamlee lived in the United States for six years, where she worked at an immigration law firm in Houston, gaining extensive hands-on experience and in-depth knowledge of U.S. immigration processes. She currently serves as a U.S. Immigration Paralegal, providing her with strong practical insight into immigration procedures from both legal and advisory perspectives.
+                                            </Typography>
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Her expertise covers F-1 (Student Visas), J-1 (Exchange Visitor Visas), B-1/B-2 (Business &amp; Tourist Visas), K-1 (Fiancé Visas), dependent visas, and green card petition processes at the paralegal level.
+                                            </Typography>
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Shamlee is particularly recognized for her ability to successfully handle previously rejected visa cases, helping clients turn challenging situations into successful outcomes through careful case preparation, strategic guidance, and personalized support.
                                             </Typography>
                                         </Box>
                                     </Box>
