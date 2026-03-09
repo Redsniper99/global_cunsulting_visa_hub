@@ -153,11 +153,11 @@ export default function AboutPage() {
                                     <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                                         <Box sx={{ position: 'relative', mb: 3 }}>
                                             <Image
-                                                src="/AboutPic2.png.webp"
+                                                src="/new pro pic.jpg"
                                                 alt="Shamlee Marambe"
                                                 width={140}
                                                 height={140}
-                                                style={{ borderRadius: '50%', objectFit: 'cover', border: '4px solid #3B5998' }}
+                                                style={{ borderRadius: '50%', objectFit: 'cover', objectPosition: 'center', border: '4px solid #3B5998' }}
                                             />
                                             <Box sx={{
                                                 position: 'absolute', bottom: 4, right: 4,
