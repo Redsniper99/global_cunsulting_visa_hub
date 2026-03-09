@@ -82,11 +82,11 @@ export default function AboutPage() {
 
             {/* Leadership Section */}
             <Box component="section" sx={{ py: 12, background: 'linear-gradient(135deg, #FAFBFF 0%, #F3F6FF 100%)' }}>
-                <Container>
+                <Container maxWidth="lg">
                     <ScrollAnimation>
                         <Box textAlign="center" mb={8}>
                             <Typography variant="h3" fontWeight="bold" sx={{ mb: 2 }}>
-                                Meet Our <Box component="span" sx={{ color: 'primary.main' }}>Leadership</Box>
+                                Meet Our <Box component="span" sx={{ color: 'primary.main' }}>Team</Box>
                             </Typography>
                             <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 400 }}>
                                 The people behind Global Consulting &amp; Visa Hub
@@ -94,129 +94,144 @@ export default function AboutPage() {
                         </Box>
                     </ScrollAnimation>
 
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    <Grid container spacing={4}>
 
-                        {/* Derick Marambe - Founder */}
-                        <GlassCard hover={false}>
-                            <Box sx={{ p: { xs: 2, md: 4 } }}>
-                                <Grid container spacing={6} alignItems="flex-start">
-                                    <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Box sx={{ position: 'relative' }}>
+                        {/* ── Row 1: Derick Marambe – full width (Founder) ── */}
+                        <Grid size={{ xs: 12 }}>
+                            <ScrollAnimation delay={0}>
+                                <GlassCard hover={false}>
+                                    <Box sx={{
+                                        p: { xs: 3, md: 4 },
+                                        display: 'flex',
+                                        flexDirection: { xs: 'column', md: 'row' },
+                                        alignItems: { xs: 'center', md: 'flex-start' },
+                                        gap: 4,
+                                    }}>
+                                        {/* Photo */}
+                                        <Box sx={{ flexShrink: 0, position: 'relative' }}>
                                             <Image
                                                 src="/Derick Marambe n.jpg"
                                                 alt="Derick Marambe"
-                                                width={200}
-                                                height={200}
-                                                style={{ borderRadius: 16, objectFit: 'cover' }}
+                                                width={180}
+                                                height={180}
+                                                style={{ borderRadius: '50%', objectFit: 'cover', border: '4px solid #3B5998', display: 'block' }}
                                             />
-                                            <Box
-                                                sx={{
-                                                    position: 'absolute',
-                                                    bottom: -10,
-                                                    right: -10,
-                                                    width: 50,
-                                                    height: 50,
-                                                    borderRadius: '50%',
-                                                    background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontSize: '1.5rem',
-                                                    boxShadow: 3
-                                                }}
-                                            >
-                                                🌟
-                                            </Box>
+                                            <Box sx={{
+                                                position: 'absolute', bottom: 4, right: 4,
+                                                width: 40, height: 40, borderRadius: '50%',
+                                                background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                fontSize: '1.2rem', boxShadow: 2,
+                                            }}>🌟</Box>
                                         </Box>
-                                    </Grid>
-                                    <Grid size={{ xs: 12, md: 8 }}>
-                                        <Box textAlign={{ xs: 'center', md: 'left' }}>
-                                            <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
+                                        {/* Bio */}
+                                        <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
+                                            <Typography variant="h4" fontWeight="bold" sx={{ mb: 0.5 }}>
                                                 Derick Marambe
                                             </Typography>
-                                            <Typography variant="subtitle1" color="primary" fontWeight="bold" sx={{ mb: 3 }}>
+                                            <Typography variant="subtitle1" color="primary" fontWeight="bold" sx={{ mb: 2.5 }}>
                                                 Founder &amp; Guiding Mentor
                                             </Typography>
-                                            <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                                <Typography variant="body2" lineHeight={1.8}>
+                                            <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                                                <Typography variant="body1" lineHeight={1.8}>
                                                     Derick Marambe served as a Senior Accountant at the Education Department in Kandy, dedicating his professional life to public service with integrity, discipline, and excellence. In the 1950s, he successfully passed the Sri Lankan Public Service competitive examination — at the time among the highest and most prestigious pathways to enter government service.
                                                 </Typography>
-                                                <Typography variant="body2" lineHeight={1.8}>
-                                                    He further distinguished himself by passing the Ceylon Civil Service (CCS) examination — the elite administrative service of the country during that era. Only a very small number of candidates were selected each year, and the examination rigorously tested English proficiency, law, public administration, economics, and governance. Through this accomplishment, he qualified to serve at the highest levels of district administration.
-                                                </Typography>
-                                                <Typography variant="body2" lineHeight={1.8}>
-                                                    In the 1960s, he was also among the very few individuals in Sri Lanka to successfully pass the competitive piloting examination. Although offered a career in aviation, he chose stability and public service. As the guiding mentor of this organization, his legacy of ethical leadership, resilience, and humility forms the foundation of our commitment to integrity and people-first service.
+                                                <Typography variant="body1" lineHeight={1.8}>
+                                                    He further distinguished himself by passing the Ceylon Civil Service (CCS) examination — the elite administrative service of the country during that era. Only a very small number of candidates were selected each year, and the examination rigorously tested English proficiency, law, public administration, economics, and governance. As the guiding mentor of this organization, his legacy of ethical leadership, resilience, and humility forms the foundation of our commitment to integrity and people-first service.
                                                 </Typography>
                                             </Box>
                                         </Box>
-                                    </Grid>
-                                </Grid>
-                            </Box>
-                        </GlassCard>
+                                    </Box>
+                                </GlassCard>
+                            </ScrollAnimation>
+                        </Grid>
 
-                        {/* Indu Marambe - Advisor */}
-                        <GlassCard hover={false}>
-                            <Box sx={{ p: { xs: 2, md: 4 } }}>
-                                <Grid container spacing={6} alignItems="flex-start">
-                                    <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Box sx={{ position: 'relative' }}>
+                        {/* ── Row 2: Shamlee + Indu – equal half-width ── */}
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <ScrollAnimation delay={0.1}>
+                                <GlassCard hover={false}>
+                                    <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                                        <Box sx={{ position: 'relative', mb: 3 }}>
+                                            <Image
+                                                src="/AboutPic2.png.webp"
+                                                alt="Shamlee Marambe"
+                                                width={140}
+                                                height={140}
+                                                style={{ borderRadius: '50%', objectFit: 'cover', border: '4px solid #3B5998' }}
+                                            />
+                                            <Box sx={{
+                                                position: 'absolute', bottom: 4, right: 4,
+                                                width: 34, height: 34, borderRadius: '50%',
+                                                background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                fontSize: '1rem', boxShadow: 2,
+                                            }}>⚖️</Box>
+                                        </Box>
+                                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 0.5 }}>
+                                            Shamlee Marambe
+                                        </Typography>
+                                        <Typography variant="subtitle2" color="primary" fontWeight="bold" sx={{ mb: 2.5 }}>
+                                            Lead Consultant
+                                        </Typography>
+                                        <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 1.5, textAlign: 'left' }}>
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Shamlee Marambe is a USA Licensed Immigration Consultant with over 8 years of experience in US visa consulting. She holds a Bachelor of Laws (LLB) and currently serves as a US Immigration Paralegal, giving her deep, practical knowledge of immigration procedures from both advisory and legal perspectives.
+                                            </Typography>
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Her expertise spans F-1, J-1, B-1/B-2, K-1, and dependent visa categories. She is particularly known for her success in handling previously rejected cases, turning difficult situations into successful outcomes through thorough preparation and personalized guidance.
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </GlassCard>
+                            </ScrollAnimation>
+                        </Grid>
+
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <ScrollAnimation delay={0.2}>
+                                <GlassCard hover={false}>
+                                    <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                                        <Box sx={{ position: 'relative', mb: 3 }}>
                                             <Image
                                                 src="/Indu Marambe.jpg"
                                                 alt="Indu Marambe"
-                                                width={200}
-                                                height={200}
-                                                style={{ borderRadius: 16, objectFit: 'cover' }}
+                                                width={140}
+                                                height={140}
+                                                style={{ borderRadius: '50%', objectFit: 'cover', border: '4px solid #3B5998' }}
                                             />
-                                            <Box
-                                                sx={{
-                                                    position: 'absolute',
-                                                    bottom: -10,
-                                                    right: -10,
-                                                    width: 50,
-                                                    height: 50,
-                                                    borderRadius: '50%',
-                                                    background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontSize: '1.5rem',
-                                                    boxShadow: 3
-                                                }}
-                                            >
-                                                🌐
-                                            </Box>
+                                            <Box sx={{
+                                                position: 'absolute', bottom: 4, right: 4,
+                                                width: 34, height: 34, borderRadius: '50%',
+                                                background: 'linear-gradient(135deg, #3B5998 0%, #6B8DD6 100%)',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                fontSize: '1rem', boxShadow: 2,
+                                            }}>🌐</Box>
                                         </Box>
-                                    </Grid>
-                                    <Grid size={{ xs: 12, md: 8 }}>
-                                        <Box textAlign={{ xs: 'center', md: 'left' }}>
-                                            <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
-                                                Indu Marambe
+                                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 0.5 }}>
+                                            Indu Marambe
+                                        </Typography>
+                                        <Typography variant="subtitle2" color="primary" fontWeight="bold" sx={{ mb: 2.5 }}>
+                                            Advisor
+                                        </Typography>
+                                        <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 1.5, textAlign: 'left' }}>
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Indu Marambe has built a distinguished career in public service, having served in the Foreign Ministry, including within the Human Rights Division. She also served as Media Coordinator to a Cabinet Minister, managing press relations and strategic media engagement.
                                             </Typography>
-                                            <Typography variant="subtitle1" color="primary" fontWeight="bold" sx={{ mb: 3 }}>
-                                                Advisor
+                                            <Typography variant="body2" lineHeight={1.8}>
+                                                Currently based in Italy, she works as a Sinhala–Italian immigration translator, supporting individuals navigating cross-border legal and administrative processes. Her extensive experience brings valuable international perspective to the organization.
                                             </Typography>
-                                            <Box sx={{ color: 'text.secondary', display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                                <Typography variant="body2" lineHeight={1.8}>
-                                                    Indu Marambe has built a distinguished career in public service, having served in the Foreign Ministry, including within the Human Rights Division. Throughout her tenure, she worked across multiple ministries, contributing expertise to public administration, governance, and policy implementation. She also served as Media Coordinator to a Cabinet Minister, managing press relations and strategic media engagement.
-                                                </Typography>
-                                                <Typography variant="body2" lineHeight={1.8}>
-                                                    An experienced journalist, she combines analytical depth with a strong commitment to truth and accountability. Following the footsteps of her father, she inherited a strong intellectual foundation and dedication to service.
-                                                </Typography>
-                                                <Typography variant="body2" lineHeight={1.8}>
-                                                    Currently based in Italy, she continues her professional journey in immigration as a Sinhala–Italian translator, supporting individuals navigating cross-border legal and administrative processes. Her extensive experience across government service, human rights, and immigration brings valuable international perspective and credibility to the organization.
-                                                </Typography>
-                                            </Box>
                                         </Box>
-                                    </Grid>
-                                </Grid>
-                            </Box>
-                        </GlassCard>
+                                    </Box>
+                                </GlassCard>
+                            </ScrollAnimation>
+                        </Grid>
 
-                    </Box>
+                    </Grid>
+
                 </Container>
             </Box>
 
             {/* Company Story Section */}
+
             <Box component="section" sx={{ py: 12 }}>
                 <Container>
                     <Grid container spacing={8} alignItems="center">
