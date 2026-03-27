@@ -16,23 +16,38 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const pages = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Process', href: '/process' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'Home', href: '/', inMore: false },
+    { name: 'Services', href: '/services', inMore: false },
+    { name: 'Certifications', href: '/certifications', inMore: false },
+    { name: 'About', href: '/about', inMore: false },
+    { name: 'Process', href: '/process', inMore: true },
+    { name: 'Testimonials', href: '/testimonials', inMore: true },
+    { name: 'FAQ', href: '/faq', inMore: true },
 ];
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [moreAnchorEl, setMoreAnchorEl] = React.useState<null | HTMLElement>(null);
+
+    const primaryPages = pages.filter((page) => !page.inMore);
+    const morePages = pages.filter((page) => page.inMore);
+    const moreMenuOpen = Boolean(moreAnchorEl);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
+    };
+    const handleMoreOpen = (event: React.MouseEvent<HTMLElement>) => {
+        setMoreAnchorEl(event.currentTarget);
+    };
+    const handleMoreClose = () => {
+        setMoreAnchorEl(null);
     };
 
     return (
@@ -85,7 +100,7 @@ export default function Navbar() {
 
                         {/* Navigation Links */}
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                            {pages.map((page) => (
+                            {primaryPages.map((page) => (
                                 <Link key={page.name} href={page.href} style={{ textDecoration: 'none' }}>
                                     <Button
                                         sx={{
@@ -106,6 +121,59 @@ export default function Navbar() {
                                     </Button>
                                 </Link>
                             ))}
+                            {morePages.length > 0 && (
+                                <>
+                                    <Button
+                                        onClick={handleMoreOpen}
+                                        endIcon={<KeyboardArrowDownIcon />}
+                                        sx={{
+                                            color: 'text.primary',
+                                            fontWeight: 500,
+                                            fontSize: '0.9rem',
+                                            px: 2,
+                                            py: 1,
+                                            borderRadius: 3,
+                                            textTransform: 'none',
+                                            transition: 'all 0.2s ease',
+                                            '&:hover': {
+                                                color: 'primary.main',
+                                                backgroundColor: 'rgba(59, 89, 152, 0.08)',
+                                            },
+                                        }}
+                                    >
+                                        More
+                                    </Button>
+                                    <Menu
+                                        anchorEl={moreAnchorEl}
+                                        open={moreMenuOpen}
+                                        onClose={handleMoreClose}
+                                        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                                        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                                        slotProps={{
+                                            paper: {
+                                                sx: {
+                                                    mt: 1,
+                                                    borderRadius: 2,
+                                                    minWidth: 200,
+                                                    boxShadow: '0 12px 32px rgba(0, 0, 0, 0.12)',
+                                                },
+                                            },
+                                        }}
+                                    >
+                                        {morePages.map((page) => (
+                                            <MenuItem
+                                                key={page.name}
+                                                component={Link}
+                                                href={page.href}
+                                                onClick={handleMoreClose}
+                                                sx={{ fontSize: '0.92rem', py: 1.2 }}
+                                            >
+                                                {page.name}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </>
+                            )}
                         </Box>
 
                         {/* CTA Button */}

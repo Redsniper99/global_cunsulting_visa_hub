@@ -14,6 +14,7 @@ const footerLinks = {
     pages: [
         { name: 'Home', href: '/' },
         { name: 'Services', href: '/services' },
+        { name: 'Certifications', href: '/certifications' },
         { name: 'About Us', href: '/about' },
         { name: 'Process', href: '/process' },
         { name: 'Testimonials', href: '/testimonials' },
